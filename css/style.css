@@ -17,12 +17,12 @@ body {
 }
 
 .logo {
-    width: 7.2rem;
+    width: 5rem;
     margin: 1rem;
 }
 
 .menu_icon {
-    font-size: 6rem;
+    font-size: 3em;
     display: inline-block;
     width: 100%;
     text-align: center;
@@ -52,12 +52,12 @@ body {
 }
 
 .grid_menu_items_active {
-    border-radius: 25px;
+    border-radius: 1.5rem;
     background-color: rgba(255, 191, 0, 0.5);
 }
 
 .grid_menu_items:hover {
-    border-radius: 25px;
+    border-radius: 1.5rem;
     background-color: rgba(255, 191, 0, 0.3);
     /* box-shadow: 0 0 6px white; */
 }
