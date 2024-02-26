@@ -71,6 +71,22 @@ body {
     margin-top: auto;
 }
 
+.mainMenu__compact {
+    font-family: 'Montserrat';
+    background-color: #0b61a4;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    display: none;
+}
+
+.mainMenu__compact::before {
+    content: '\f0c9';
+    font-family: Fontawesome;
+}
+
+
 .grid_tickets {
     /* min-width: 40rem; */
     width: 25%;
@@ -81,15 +97,14 @@ body {
 }
 
 .ticket_search {
+    width: 50%;
     font-family: 'Montserrat';
-    /* height: 4rem; */
     margin: 1rem;
     margin-right: 0;
     font-size: 1em;
     border: none;
     border-radius: 9px;
     padding: 0.5rem;
-    /* color: rgba(0, 0, 0, 0.3); */
 }
 
 .ticket_search::placeholder {
@@ -99,7 +114,8 @@ body {
 
 .ticketSearch__submit {
     font-family: 'Montserrat';
-    margin: 1rem 0;
+    margin: 1rem;
+    margin-left: 0;
     font-size: 1em;
     border: none;
     border-radius: 9px;
@@ -134,7 +150,8 @@ ul {
 .ticket_header {
     display: inline-block;
     text-align: center;
-    height: 20rem;
+    width: 100%;
+    /* height: 20rem; */
 }
 
 
@@ -143,6 +160,7 @@ ul {
 .ticket_header_menu {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     padding: 1rem;
 }
 
@@ -218,6 +236,7 @@ ul {
 }
 
 .ticket_list_content {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -272,8 +291,8 @@ ul {
 }
 
 .converstation_info {
-    height: 20rem;
-    min-height: 20rem;
+    /* height: 20rem; */
+    /* min-height: 20rem; */
     background-color: #3f92d2;
     text-align: center;
 }
@@ -435,4 +454,36 @@ ul {
     border: none;
     background-color: transparent;
     padding: 0;
+}
+
+@media (max-width: 1760px) {
+    .ticket_icon {
+        visibility: hidden;
+        width: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .grid_menu {
+        display: none;
+    }
+    .mainMenu__compact {
+        display: block;
+    }
+
+}
+
+@media (max-width: 920px) {
+
+    .grid_converstation {
+    display: none;
+    }
+
+    .grid_tickets {
+        width: 100%; 
+        background-color: #3f92d2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
