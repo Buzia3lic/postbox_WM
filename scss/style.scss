@@ -1,0 +1,467 @@
+@import './normalize';
+@import './vars';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    font-size: $bodyTextSize;
+}
+
+body {
+    font-family: 'Montserrat', Times, serif;
+    font-size: 1.4rem;
+    width: 100%;
+    margin: auto;
+    flex-grow: 1;
+    box-sizing: border-box;
+}
+
+/* h2 {
+    font-size: 2rem;
+} */
+
+.logo {
+    width: 5rem;
+    margin: 1rem;
+}
+
+.menu_icon {
+    font-size: 3em;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.grid {
+    display: flex;
+    /* flex-grow: 1; */
+    /* resize: horizontal; */
+}
+
+.grid_menu {
+    background-color: $mainMenuColor1;
+    display: flex;
+    flex-direction: column;
+    /* height: 100vh; */
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.grid_menu_items {
+    margin-bottom: 1rem;
+    font-family: 'Montserrat';
+    color: $mainMenuColor2;
+    font-size: 1.6rem;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.grid_menu_items_active {
+    border-radius: 1.5rem;
+    background-color: $mainMenuActiveColor;
+}
+
+.grid_menu_items:hover {
+    border-radius: 1.5rem;
+    background-color: $mainMenuHoverColor;
+    /* box-shadow: 0 0 6px white; */
+}
+
+.grid_menu_items:last-child {
+    margin-top: auto;
+}
+
+.mainMenu__compact {
+    font-family: 'Montserrat';
+    background-color: $mainMenuColor1;
+    padding: 1rem;
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: bold;
+    color: $mainMenuColor2;
+    display: none;
+}
+
+.mainMenu__compact::before {
+    content: '\f0c9';
+    font-family: Fontawesome;
+}
+
+
+.grid_tickets {
+    /* min-width: 40rem; */
+    width: 25%;
+    background-color: $mainColor2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ticket_search {
+    width: 50%;
+    font-family: 'Montserrat';
+    margin: 1rem;
+    margin-right: 0;
+    font-size: 1em;
+    border: none;
+    border-radius: 9px;
+    padding: 0.5rem;
+}
+
+.ticket_search::placeholder {
+    font-family: 'Montserrat';
+    opacity: 0.3;
+}
+
+.ticketSearch__submit {
+    font-family: 'Montserrat';
+    margin: 1rem;
+    margin-left: 0;
+    font-size: 1em;
+    border: none;
+    border-radius: 9px;
+    padding: 0.5rem;
+    background-color: rgb(255, 227, 142);
+}
+
+/* .ticket_search:after{
+content: '\f002';
+font-family: FontAwesome;
+color: rgba(0, 0, 0, 0.3);
+} */
+
+ul {
+    list-style: none;
+}
+
+.select_emails {
+    font-family: 'Montserrat';
+    padding: 0.5rem;
+    margin-left: 1rem;
+    font-size: 1em;
+}
+
+.ticket_header_count {
+    margin-left: 1rem;
+    border: 1px solid;
+    border-radius: 1.5rem;
+    padding: 0 1rem;
+}
+
+.ticket_header {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    /* height: 20rem; */
+}
+
+
+
+
+.ticket_header_menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.ticket_header_menu_item {
+    padding: 1rem;
+}
+
+.ticket_header_menu_item:hover {
+    background-color: $ticketMenuHoverColor;
+    border-radius: 2.7rem;
+}
+
+.ticket_header_menu_item_active {
+    background-color: $ticketMenuActiveColor;
+    border-radius: 2.7rem;
+    color: $ticketMenuActiveSecondColor;
+}
+
+
+.ticket_list {
+    height: calc(100vh - 20rem);
+    width: 98%;
+    padding: 0;
+    overflow: auto;
+}
+
+.ticket_list::-webkit-scrollbar {
+    width: 1rem;
+}
+
+.ticket_list::-webkit-scrollbar-track {
+    background: $ticketListScrollColor1;
+}
+
+.ticket_list::-webkit-scrollbar-thumb {
+    background-color: $ticketListScrollColor2;
+    border-radius: 1rem;
+    border: 1px solid $ticketListScrollColor1;
+}
+
+.ticket_list_item {
+    display: flex;
+    background-color: $ticketListItemColor1;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.ticket_list_content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+}
+
+.ticket_email {
+    padding: 0 1rem 1rem 0;
+}
+
+.ticket_time {
+    padding: 0 1rem 1rem 0;
+}
+
+.ticket_theme {
+    padding: 0 1rem 1rem 0;
+}
+
+/* .ticket_icon {
+    height: 4rem;
+    width: 4rem;
+    background-color: #a67c00;
+    border-radius: 100%;
+    padding: 1rem 1.5rem;
+    margin: 1rem;
+} */
+
+.ticket_icon {
+    margin: 1rem;
+    width: 4rem;
+}
+
+.ticket_list_item_active {
+    background-color: $ticketListItemActiveColor;
+}
+
+.ticket_list_item:nth-child(even) {
+    background-color: $ticketListItemColor2;
+}
+
+.ticket_list_item:hover {
+    background-color: $ticketListItemHoverColor;
+}
+
+.grid_converstation {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /* background-color: #8b8e91; */
+    flex-grow: 1;
+
+}
+
+.converstation_info {
+    /* height: 20rem; */
+    /* min-height: 20rem; */
+    background-color: $mainColor2;
+    text-align: center;
+}
+
+
+.converstation_field {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: $converstationBackground;
+    overflow: auto;
+}
+
+.converstation_field::-webkit-scrollbar {
+    width: 1rem;
+}
+
+.converstation_field::-webkit-scrollbar-track {
+    background: $converstationScrollColor1;
+}
+
+.converstation_field::-webkit-scrollbar-thumb {
+    background-color: $converstationScrollColor2;
+    border-radius: 1rem;
+    border: 1px solid $converstationScrollColor1;
+}
+
+
+.converstation_question {
+    position: relative;
+    max-width: 70%;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: $converstationQuestionColor;
+    margin: 1rem;
+    align-self: flex-start;
+}
+
+.converstation_question:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -0.9rem;
+    bottom: 1rem;
+    border: 1rem solid;
+    border-color: transparent $converstationQuestionColor $converstationQuestionColor transparent;
+}
+
+
+.converstation_answer {
+    position: relative;
+    max-width: 70%;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: $converstationAnswerColor;
+    margin: 1rem;
+    align-self: flex-end;
+}
+
+.converstation_answer:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: -0.9rem;
+    bottom: 1rem;
+    border: 1rem solid;
+    border-color: transparent transparent $converstationAnswerColor $converstationAnswerColor;
+}
+
+.question_info {
+    opacity: 0.5;
+    float: right;
+    margin-top: 1rem;
+}
+
+.answer_info {
+    opacity: 0.5;
+    float: right;
+    margin-top: 1rem;
+}
+
+.answer_info>span {
+    margin-right: 1rem;
+}
+
+
+
+.converstation_textfield {
+    // border-top: 2px solid #c79500;
+    display: flex;
+    flex-direction: column;
+    background-color: $textFieldBoxColor;
+
+}
+
+.new_answer {
+    font-family: 'Montserrat';
+    resize: none;
+    margin: 1rem 1rem;
+    font-size: 1em;
+    border-radius: 4px;
+    padding: 0.5rem;
+
+    border: none;
+    outline: none;
+}
+
+.new_answer:focus {
+    box-shadow: 0 0 1rem $answerShadow;
+}
+
+.new_answer::placeholder {
+    font-family: 'Montserrat';
+    opacity: 0.5;
+}
+
+
+.btn_layout {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    // text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 1rem;
+    border: none;
+    border-radius: 1em;
+    background-color: $btnBackgroundColor;
+    margin: 1rem;
+    color: $btnTextColor;
+}
+
+.btn_icon {
+    font-size: 1.5em;
+    /* display: inline-block; */
+    /* width: 100%; */
+    /* text-align: center; */
+}
+
+.btn:hover {
+    background-color: $btnBackgroundHoverColor;
+    box-shadow: 0 0 10px $btnTextHoverColor;
+    color: $btnTextHoverColor;
+    cursor: pointer;
+}
+
+.btn_icon:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.answer_btn_field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.answer_attach {
+    // color: #585858;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+@media (max-width: 1760px) {
+    .ticket_icon {
+        visibility: hidden;
+        width: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .grid_menu {
+        display: none;
+    }
+    .mainMenu__compact {
+        display: block;
+    }
+
+}
+
+@media (max-width: 920px) {
+
+    .grid_converstation {
+    display: none;
+    }
+
+    .grid_tickets {
+        width: 100%;
+    }
+}
