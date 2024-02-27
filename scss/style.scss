@@ -11,17 +11,13 @@ html {
 }
 
 body {
-    font-family: 'Montserrat', Times, serif;
+    font-family: 'Montserrat', Arial, sans-serif;
     font-size: 1.4rem;
     width: 100%;
     margin: auto;
     flex-grow: 1;
     box-sizing: border-box;
 }
-
-/* h2 {
-    font-size: 2rem;
-} */
 
 .logo {
     width: 5rem;
@@ -37,22 +33,30 @@ body {
 
 .grid {
     display: flex;
-    /* flex-grow: 1; */
-    /* resize: horizontal; */
+    flex-basis: 38rem;
 }
 
-.grid_menu {
+.grid_menu_space {
     background-color: $mainMenuColor1;
     display: flex;
     flex-direction: column;
-    /* height: 100vh; */
     align-items: center;
+    justify-content: space-between;
     padding: 0.5rem;
 }
 
+.grid_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+
 .grid_menu_items {
     margin-bottom: 1rem;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', Arial, sans-serif;
     color: $mainMenuColor2;
     font-size: 1.6rem;
     text-decoration: none;
@@ -70,12 +74,12 @@ body {
     /* box-shadow: 0 0 6px white; */
 }
 
-.grid_menu_items:last-child {
-    margin-top: auto;
-}
+// .grid_menu_items:last-child {
+//     margin-top: auto;
+// }
 
 .mainMenu__compact {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', Arial, sans-serif;
     background-color: $mainMenuColor1;
     padding: 1rem;
     text-transform: uppercase;
@@ -92,17 +96,19 @@ body {
 
 
 .grid_tickets {
-    /* min-width: 40rem; */
-    width: 25%;
+    // width: 25%;
+    min-height: 38rem;
+    height: 100vh;
     background-color: $mainColor2;
     display: flex;
     flex-direction: column;
+    // flex-grow: 1;
     align-items: center;
 }
 
 .ticket_search {
     width: 50%;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', Arial, sans-serif;
     margin: 1rem;
     margin-right: 0;
     font-size: 1em;
@@ -112,12 +118,12 @@ body {
 }
 
 .ticket_search::placeholder {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', Arial, sans-serif;
     opacity: 0.3;
 }
 
 .ticketSearch__submit {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', Arial, sans-serif;
     margin: 1rem;
     margin-left: 0;
     font-size: 1em;
@@ -125,6 +131,17 @@ body {
     border-radius: 9px;
     padding: 0.5rem;
     background-color: rgb(255, 227, 142);
+}
+
+.ticketMenu__name {
+    text-transform: uppercase;
+    display: inline-block;
+    background-color: rgba(11, 98, 164, 0.5);
+    padding: 1rem 0;
+    width: 99%;
+
+    color: $mainMenuColor2;
+    font-weight: bolder;
 }
 
 /* .ticket_search:after{
@@ -138,7 +155,7 @@ ul {
 }
 
 .select_emails {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', Arial, sans-serif;
     padding: 0.5rem;
     margin-left: 1rem;
     font-size: 1em;
@@ -185,8 +202,11 @@ ul {
 
 
 .ticket_list {
-    height: calc(100vh - 20rem);
-    width: 98%;
+    // height: calc(100vh - 20rem);
+    // height: 100vh;
+    background-color: white;
+    flex-grow: 1;
+    width: 99%;
     padding: 0;
     overflow: auto;
 }
@@ -213,7 +233,7 @@ ul {
 }
 
 .ticket_list_content {
-    width: 100%;
+    // width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -241,10 +261,29 @@ ul {
     margin: 1rem;
 } */
 
+
 .ticket_icon {
-    margin: 1rem;
+    margin: 0rem;
     width: 4rem;
 }
+
+.ticket__checkbox {
+    position: relative;
+    padding: 1rem;
+}
+
+.customCheckbox {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    // z-index: -1;
+    // opacity: 0;
+}
+
+
+// .ticket_list_item__checked{
+//     opacity: 0.5;
+// }
 
 .ticket_list_item_active {
     background-color: $ticketListItemActiveColor;
@@ -270,6 +309,7 @@ ul {
 .converstation_info {
     /* height: 20rem; */
     /* min-height: 20rem; */
+    padding: 1rem;
     background-color: $mainColor2;
     text-align: center;
 }
@@ -368,7 +408,7 @@ ul {
 }
 
 .new_answer {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', Arial, sans-serif;
     resize: none;
     margin: 1rem 1rem;
     font-size: 1em;
@@ -384,7 +424,7 @@ ul {
 }
 
 .new_answer::placeholder {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', Arial, sans-serif;
     opacity: 0.5;
 }
 
@@ -440,15 +480,24 @@ ul {
 
 @media (max-width: 1760px) {
     .ticket_icon {
-        visibility: hidden;
-        width: 0;
+        display: none;
+    }
+
+    // .ticket__checkbox{
+    //     padding: 1rem;
+    // }
+
+    .customCheckbox {
+        position: static;
+        // margin: 0 1rem;
     }
 }
 
 @media (max-width: 1200px) {
-    .grid_menu {
+    .grid_menu_space {
         display: none;
     }
+
     .mainMenu__compact {
         display: block;
     }
@@ -458,7 +507,7 @@ ul {
 @media (max-width: 920px) {
 
     .grid_converstation {
-    display: none;
+        display: none;
     }
 
     .grid_tickets {

@@ -15,16 +15,18 @@
 
 <body>
     <div class="grid">
-        <div class="grid_menu">
-            <a href="#"><img class="logo" src="img/logo_wt.png" alt="logo"></a>
-            <a href="#" class="grid_menu_items grid_menu_items_active">
-                <i class="fa-regular fa-comment-dots menu_icon"></i>
-                <br>
-                Тикеты</a>
-            <a href="#" class="grid_menu_items">
-                <i class="fa-solid fa-list menu_icon"></i>
-                <br>
-                Ящики</a>
+        <div class="grid_menu_space">
+            <div class="grid_menu">
+                <a href="#"><img class="logo" src="img/logo_wt.png" alt="logo"></a>
+                <a href="#" class="grid_menu_items grid_menu_items_active">
+                    <i class="fa-regular fa-comment-dots menu_icon"></i>
+                    <br>
+                    Тикеты</a>
+                <a href="#" class="grid_menu_items">
+                    <i class="fa-solid fa-list menu_icon"></i>
+                    <br>
+                    Ящики</a>
+            </div>
             <a href="#" class="grid_menu_items">
                 <i class="fa-solid fa-right-from-bracket menu_icon"></i>
                 <br>
@@ -50,7 +52,7 @@
 
 
                 <div>
-                    <h2>Диалоги</h2>
+                    <span class="ticketMenu__name">Диалоги</span>
                     <ul class="ticket_header_menu">
                         <li class="ticket_header_menu_item ticket_header_menu_item_active">Все<span
                                 class="ticket_header_count">54</span></li>
@@ -66,10 +68,27 @@
 
 
             <ul class="ticket_list">
+
                 <li class="ticket_list_item ticket_list_item_active">
-                    <!-- <div class="ticket_icon">L</div> -->
-                    <img class="ticket_icon"
-                        src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=66a3d2&color=fff">
+                    <label class="ticket__checkbox">
+                        <input class="customCheckbox" type="checkbox">
+                        <img class="ticket_icon"
+                            src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=66a3d2&color=fff">
+                    </label>
+                    <div class="ticket_list_content">
+                        <div class="ticket_email">lorem@mail.ru</div>
+                        <div class="ticket_time">19.02.24 14:41:25</div>
+                        <div class="ticket_theme">Lorem ipsum dolor, sit amet consectetur adipisicing.</div>
+                    </div>
+                </li>
+
+                <li class="ticket_list_item">
+                    <label class="ticket__checkbox">
+                        <input class="customCheckbox" type="checkbox" checked>
+                        <img class="ticket_icon"
+                            src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=66a3d2&color=fff">
+                    </label>
+
                     <div class="ticket_list_content">
                         <div class="ticket_email">lorem@mail.ru</div>
                         <div class="ticket_time">19.02.24 14:41:25</div>
@@ -77,9 +96,12 @@
                     </div>
                 </li>
                 <li class="ticket_list_item">
-                    <!-- <div class="ticket_icon">L</div> -->
-                    <img class="ticket_icon"
-                        src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=66a3d2&color=fff">
+                    <label class="ticket__checkbox">
+                        <input class="customCheckbox" type="checkbox">
+                        <img class="ticket_icon"
+                            src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=66a3d2&color=fff">
+                    </label>
+
                     <div class="ticket_list_content">
                         <div class="ticket_email">lorem@mail.ru</div>
                         <div class="ticket_time">19.02.24 14:41:25</div>
@@ -87,9 +109,12 @@
                     </div>
                 </li>
                 <li class="ticket_list_item">
-                    <!-- <div class="ticket_icon">L</div> -->
-                    <img class="ticket_icon"
-                        src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=66a3d2&color=fff">
+                    <label class="ticket__checkbox">
+                        <input class="customCheckbox" type="checkbox">
+                        <img class="ticket_icon"
+                            src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=66a3d2&color=fff">
+                    </label>
+
                     <div class="ticket_list_content">
                         <div class="ticket_email">lorem@mail.ru</div>
                         <div class="ticket_time">19.02.24 14:41:25</div>
@@ -97,9 +122,12 @@
                     </div>
                 </li>
                 <li class="ticket_list_item">
-                    <!-- <div class="ticket_icon">L</div> -->
-                    <img class="ticket_icon"
-                        src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=66a3d2&color=fff">
+                    <label class="ticket__checkbox">
+                        <input class="customCheckbox" type="checkbox">
+                        <img class="ticket_icon"
+                            src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=66a3d2&color=fff">
+                    </label>
+
                     <div class="ticket_list_content">
                         <div class="ticket_email">lorem@mail.ru</div>
                         <div class="ticket_time">19.02.24 14:41:25</div>
@@ -107,115 +135,19 @@
                     </div>
                 </li>
                 <li class="ticket_list_item">
-                    <!-- <div class="ticket_icon">L</div> -->
-                    <img class="ticket_icon"
-                        src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=66a3d2&color=fff">
+                    <label class="ticket__checkbox">
+                        <input class="customCheckbox" type="checkbox">
+                        <img class="ticket_icon"
+                            src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=66a3d2&color=fff">
+                    </label>
+
                     <div class="ticket_list_content">
                         <div class="ticket_email">lorem@mail.ru</div>
                         <div class="ticket_time">19.02.24 14:41:25</div>
                         <div class="ticket_theme">Lorem ipsum dolor, sit amet consectetur adipisicing.</div>
                     </div>
                 </li>
-                <li class="ticket_list_item">
-                    <!-- <div class="ticket_icon">L</div> -->
-                    <img class="ticket_icon"
-                        src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=66a3d2&color=fff">
-                    <div class="ticket_list_content">
-                        <div class="ticket_email">lorem@mail.ru</div>
-                        <div class="ticket_time">19.02.24 14:41:25</div>
-                        <div class="ticket_theme">Lorem ipsum dolor, sit amet consectetur adipisicing.</div>
-                    </div>
-                </li>
-                <li class="ticket_list_item">
-                    <!-- <div class="ticket_icon">L</div> -->
-                    <img class="ticket_icon"
-                        src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=66a3d2&color=fff">
-                    <div class="ticket_list_content">
-                        <div class="ticket_email">lorem@mail.ru</div>
-                        <div class="ticket_time">19.02.24 14:41:25</div>
-                        <div class="ticket_theme">Lorem ipsum dolor, sit amet consectetur adipisicing.</div>
-                    </div>
-                </li>
-                <li class="ticket_list_item">
-                    <!-- <div class="ticket_icon">L</div> -->
-                    <img class="ticket_icon"
-                        src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=66a3d2&color=fff">
-                    <div class="ticket_list_content">
-                        <div class="ticket_email">lorem@mail.ru</div>
-                        <div class="ticket_time">19.02.24 14:41:25</div>
-                        <div class="ticket_theme">Lorem ipsum dolor, sit amet consectetur adipisicing.</div>
-                    </div>
-                </li>
-                <li class="ticket_list_item">
-                    <!-- <div class="ticket_icon">L</div> -->
-                    <img class="ticket_icon"
-                        src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=66a3d2&color=fff">
-                    <div class="ticket_list_content">
-                        <div class="ticket_email">lorem@mail.ru</div>
-                        <div class="ticket_time">19.02.24 14:41:25</div>
-                        <div class="ticket_theme">Lorem ipsum dolor, sit amet consectetur adipisicing.</div>
-                    </div>
-                </li>
-                <li class="ticket_list_item">
-                    <!-- <div class="ticket_icon">L</div> -->
-                    <img class="ticket_icon"
-                        src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=66a3d2&color=fff">
-                    <div class="ticket_list_content">
-                        <div class="ticket_email">lorem@mail.ru</div>
-                        <div class="ticket_time">19.02.24 14:41:25</div>
-                        <div class="ticket_theme">Lorem ipsum dolor, sit amet consectetur adipisicing.</div>
-                    </div>
-                </li>
-                <li class="ticket_list_item">
-                    <!-- <div class="ticket_icon">L</div> -->
-                    <img class="ticket_icon"
-                        src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=66a3d2&color=fff">
-                    <div class="ticket_list_content">
-                        <div class="ticket_email">lorem@mail.ru</div>
-                        <div class="ticket_time">19.02.24 14:41:25</div>
-                        <div class="ticket_theme">Lorem ipsum dolor, sit amet consectetur adipisicing.</div>
-                    </div>
-                </li>
-                <li class="ticket_list_item">
-                    <!-- <div class="ticket_icon">L</div> -->
-                    <img class="ticket_icon"
-                        src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=66a3d2&color=fff">
-                    <div class="ticket_list_content">
-                        <div class="ticket_email">lorem@mail.ru</div>
-                        <div class="ticket_time">19.02.24 14:41:25</div>
-                        <div class="ticket_theme">Lorem ipsum dolor, sit amet consectetur adipisicing.</div>
-                    </div>
-                </li>
-                <li class="ticket_list_item">
-                    <!-- <div class="ticket_icon">L</div> -->
-                    <img class="ticket_icon"
-                        src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=66a3d2&color=fff">
-                    <div class="ticket_list_content">
-                        <div class="ticket_email">lorem@mail.ru</div>
-                        <div class="ticket_time">19.02.24 14:41:25</div>
-                        <div class="ticket_theme">Lorem ipsum dolor, sit amet consectetur adipisicing.</div>
-                    </div>
-                </li>
-                <li class="ticket_list_item">
-                    <!-- <div class="ticket_icon">L</div> -->
-                    <img class="ticket_icon"
-                        src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=66a3d2&color=fff">
-                    <div class="ticket_list_content">
-                        <div class="ticket_email">lorem@mail.ru</div>
-                        <div class="ticket_time">19.02.24 14:41:25</div>
-                        <div class="ticket_theme">Lorem ipsum dolor, sit amet consectetur adipisicing.</div>
-                    </div>
-                </li>
-                <li class="ticket_list_item">
-                    <!-- <div class="ticket_icon">L</div> -->
-                    <img class="ticket_icon"
-                        src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=66a3d2&color=fff">
-                    <div class="ticket_list_content">
-                        <div class="ticket_email">lorem@mail.ru</div>
-                        <div class="ticket_time">19.02.24 14:41:25</div>
-                        <div class="ticket_theme">Lorem ipsum dolor, sit amet consectetur adipisicing.</div>
-                    </div>
-                </li>
+
             </ul>
 
 
