@@ -267,7 +267,7 @@ body {
 }
 
 .grid_menu_space {
-  background-color: #0b61a4;
+  background-color: #212121;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -292,18 +292,19 @@ body {
 
 .grid_menu_items_active {
   border-radius: 1.5rem;
-  background-color: rgba(255, 191, 0, 0.5);
+  background-color: #74adc6;
+  font-weight: bold;
 }
 
 .grid_menu_items:hover {
   border-radius: 1.5rem;
-  background-color: rgba(255, 191, 0, 0.3);
+  background-color: #2b2b2b;
   /* box-shadow: 0 0 6px white; */
 }
 
 .mainMenu__compact {
   font-family: "Montserrat", Arial, sans-serif;
-  background-color: #0b61a4;
+  background-color: #212121;
   padding: 1rem;
   text-transform: uppercase;
   text-align: left;
@@ -320,7 +321,7 @@ body {
 .grid_tickets {
   min-height: 38rem;
   height: 100vh;
-  background-color: #3f92d2;
+  background-color: #212121;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -355,13 +356,13 @@ body {
   border: none;
   border-radius: 9px;
   padding: 0.5rem;
-  background-color: rgb(255, 227, 142);
+  background-color: #74adc6;
 }
 
 .ticketMenu__name {
   text-transform: uppercase;
   display: inline-block;
-  background-color: rgba(11, 98, 164, 0.5);
+  background-color: #181818;
   padding: 1rem 0;
   width: 99%;
   color: #ffffff;
@@ -407,17 +408,18 @@ ul {
 
 .ticket_header_menu_item {
   padding: 1rem;
+  color: #ffffff;
 }
 
 .ticket_header_menu_item:hover {
-  background-color: rgba(255, 191, 0, 0.3);
+  background-color: #2b2b2b;
   border-radius: 2.7rem;
 }
 
 .ticket_header_menu_item_active {
-  background-color: rgba(255, 191, 0, 0.5);
+  background-color: #74adc6;
   border-radius: 2.7rem;
-  color: #8a6801;
+  font-weight: bold;
 }
 
 .ticket_list {
@@ -444,7 +446,7 @@ ul {
 
 .ticket_list_item {
   display: flex;
-  background-color: #ffffff;
+  background-color: #eeeeee;
   justify-content: flex-start;
   align-items: center;
 }
@@ -493,15 +495,17 @@ ul {
 }
 
 .ticket_list_item_active {
-  background-color: #ffdc73;
+  background-color: #74adc6;
+  font-weight: bold;
+  color: white;
 }
 
 .ticket_list_item:nth-child(even) {
-  background-color: #f5f5f5;
+  background-color: #d8d8d8;
 }
 
 .ticket_list_item:hover {
-  background-color: rgb(252, 234, 183);
+  background-color: #b3d1df;
 }
 
 .grid_converstation {
@@ -516,7 +520,7 @@ ul {
   /* height: 20rem; */
   /* min-height: 20rem; */
   padding: 1rem;
-  background-color: #3f92d2;
+  background-color: #212121;
   text-align: center;
 }
 
@@ -524,7 +528,7 @@ ul {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  background-color: rgba(255, 220, 115, 0.2);
+  background-color: #eeeeee;
   overflow: auto;
 }
 
@@ -547,9 +551,10 @@ ul {
   max-width: 70%;
   padding: 1rem;
   border-radius: 1rem;
-  background-color: rgb(255, 214, 93);
+  background-color: #212121;
   margin: 1rem;
   align-self: flex-start;
+  color: white;
 }
 
 .converstation_question:before {
@@ -560,7 +565,7 @@ ul {
   left: -0.9rem;
   bottom: 1rem;
   border: 1rem solid;
-  border-color: transparent rgb(255, 214, 93) rgb(255, 214, 93) transparent;
+  border-color: transparent #212121 #212121 transparent;
 }
 
 .converstation_answer {
@@ -568,9 +573,10 @@ ul {
   max-width: 70%;
   padding: 1rem;
   border-radius: 1rem;
-  background-color: rgb(255, 235, 175);
+  background-color: #49827f;
   margin: 1rem;
   align-self: flex-end;
+  color: white;
 }
 
 .converstation_answer:after {
@@ -581,7 +587,7 @@ ul {
   right: -0.9rem;
   bottom: 1rem;
   border: 1rem solid;
-  border-color: transparent transparent rgb(255, 235, 175) rgb(255, 235, 175);
+  border-color: transparent transparent #49827f #49827f;
 }
 
 .question_info {
@@ -603,7 +609,7 @@ ul {
 .converstation_textfield {
   display: flex;
   flex-direction: column;
-  background-color: rgb(202, 168, 67);
+  background-color: #212121;
 }
 
 .new_answer {
@@ -618,7 +624,7 @@ ul {
 }
 
 .new_answer:focus {
-  box-shadow: 0 0 1rem rgb(0, 153, 0);
+  box-shadow: 0 0 1rem rgb(1, 165, 42);
 }
 
 .new_answer::-moz-placeholder {
@@ -634,6 +640,7 @@ ul {
 .btn_layout {
   display: flex;
   align-items: center;
+  color: white;
 }
 
 .btn {
@@ -642,9 +649,9 @@ ul {
   padding: 1rem;
   border: none;
   border-radius: 1em;
-  background-color: rgb(255, 230, 157);
+  background-color: #74adc6;
   margin: 1rem;
-  color: rgb(202, 168, 67);
+  color: white;
 }
 
 .btn_icon {
@@ -655,9 +662,9 @@ ul {
 }
 
 .btn:hover {
-  background-color: rgb(0, 252, 0);
-  box-shadow: 0 0 10px rgb(0, 153, 0);
-  color: rgb(0, 153, 0);
+  background-color: white;
+  box-shadow: 0 0 10px #74adc6;
+  color: #74adc6;
   cursor: pointer;
 }
 
