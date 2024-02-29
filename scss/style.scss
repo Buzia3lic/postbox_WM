@@ -1,6 +1,7 @@
 @import './normalize';
 // @import './vars';
-@import './varsDark';
+// @import './varsDark';
+@import './varsYeah';
 
 * {
     box-sizing: border-box;
@@ -45,6 +46,9 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem;
+    position: relative;
+    // animation-name: menuSlide;
+    // animation-duration: 1s;
 }
 
 .grid_menu {
@@ -63,18 +67,22 @@ body {
     font-size: 1.6rem;
     text-decoration: none;
     padding: 1rem;
+    transition: all 0.5s ease-in-out;
 }
 
 .grid_menu_items_active {
-    border-radius: 1.5rem;
-    background-color: $mainMenuActiveColor;
-    font-weight: bold;
+    // border-radius: 1.5rem;
+    // background-color: $mainMenuActiveColor;
+    // font-weight: bold;
+    color: $mainMenuActiveColor;
 }
 
 .grid_menu_items:hover {
-    border-radius: 1.5rem;
-    background-color: $mainMenuHoverColor;
+    // border-radius: 1.5rem;
+    // background-color: $mainMenuHoverColor;
     /* box-shadow: 0 0 6px white; */
+    color: $mainMenuHoverColor;
+    transform: scale(1.1);  
 }
 
 // .grid_menu_items:last-child {
@@ -82,20 +90,33 @@ body {
 // }
 
 .mainMenu__compact {
-    font-family: 'Montserrat', Arial, sans-serif;
     background-color: $mainMenuColor1;
     padding: 1rem;
-    text-transform: uppercase;
     text-align: left;
-    font-weight: bold;
-    color: $mainMenuColor2;
-    display: none;
+    
+  
 }
 
-.mainMenu__compact::before {
+.mainMenu__compact__btn{
+    display: inline-block;
+    font-family: 'Montserrat', Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $mainMenuActiveColor;
+    transition: all 0.5s ease-in-out;
+}
+
+.mainMenu__compact__btn::before {
     content: '\f0c9';
+    padding-right: 0.5rem;
     font-family: Fontawesome;
 }
+
+.mainMenu__compact__btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);   
+}
+
 
 
 .grid_tickets {
@@ -137,13 +158,13 @@ body {
 }
 
 .ticketMenu__name {
-    text-transform: uppercase;
+    // text-transform: uppercase;
     display: inline-block;
     background-color: $ticketMenuNameColor;
     padding: 1rem 0;
     width: 99%;
 
-    color: $mainMenuColor2;
+    color: $TextColor;
     font-weight: bolder;
 }
 
@@ -186,23 +207,31 @@ ul {
     flex-wrap: wrap;
     justify-content: center;
     padding: 1rem;
+    transition: all 0.5s ease-in-out;
 }
 
 .ticket_header_menu_item {
     padding: 1rem;
-    color: $mainMenuColor2;
+    color: $TextColor;
 }
 
 .ticket_header_menu_item:hover {
-    background-color: $ticketMenuHoverColor;
-    border-radius: 2.7rem;
+    color: $ticketMenuHoverColor;
+    cursor: pointer;
+    border-bottom: 1px solid $ticketMenuHoverColor;
 }
 
 .ticket_header_menu_item_active {
-    background-color: $ticketMenuActiveColor;
-    border-radius: 2.7rem;
+    // background-color: $ticketMenuActiveColor;
+    // border-radius: 2.7rem;
+    color: $ticketMenuActiveColor;
+    border-bottom: 2px solid $ticketMenuActiveColor;
     font-weight: bold;
     // color: $ticketMenuActiveSecondColor;
+}
+
+.ticket_header_menu_item_active .ticket_header_count{
+    border: 2px solid;
 }
 
 
@@ -231,6 +260,7 @@ ul {
 }
 
 .ticket_list_item {
+    cursor: pointer;
     display: flex;
     background-color: $ticketListItemColor1;
     justify-content: flex-start;
@@ -319,6 +349,7 @@ ul {
     padding: 1rem;
     background-color: $mainColor2;
     text-align: center;
+    border-bottom: 2px solid #e8e8f0;
 }
 
 
@@ -326,7 +357,8 @@ ul {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    background-color: $converstationBackground;
+    // background-color: $converstationBackground;
+    background-image: url( '../img/pattern.png');
     overflow: auto;
 }
 
@@ -354,6 +386,7 @@ ul {
     margin: 1rem;
     align-self: flex-start;
     color: $TextColor;
+    box-shadow: 0 0 1rem 0px rgb(177, 177, 177);
 }
 
 .converstation_question:before {
@@ -377,6 +410,7 @@ ul {
     margin: 1rem;
     align-self: flex-end;
     color: $TextColor;
+    box-shadow: 0 0 1rem 0px rgb(177, 177, 177);
 }
 
 .converstation_answer:after {
@@ -410,19 +444,28 @@ ul {
 
 .converstation_textfield {
     // border-top: 2px solid #c79500;
+    // display: flex;
+    // flex-direction: column;
+    background-color: $textFieldBoxColor;
+    border-top: 2px solid #e8e8f0;
+}
+
+.converstation_textfield__answerField{
+    margin: 1rem 2rem;
+    border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
-    background-color: $textFieldBoxColor;
-
+    // width: 100%;
+    background-color: white;
 }
 
 .new_answer {
     font-family: 'Montserrat', Arial, sans-serif;
     resize: none;
-    margin: 1rem 1rem;
+    // margin: 1rem 1rem;
     font-size: 1em;
     border-radius: 4px;
-    padding: 0.5rem;
+    padding: 1rem;
 
     border: none;
     outline: none;
@@ -449,8 +492,8 @@ ul {
     font-weight: bold;
     font-size: 1em;
     padding: 1rem;
-    border: none;
-    border-radius: 1em;
+    border: 1px solid $btnTextColor;
+    border-radius: 0.4em;
     background-color: $btnBackgroundColor;
     margin: 1rem;
     color: $btnTextColor;
@@ -465,7 +508,7 @@ ul {
 
 .btn:hover {
     background-color: $btnBackgroundHoverColor;
-    box-shadow: 0 0 10px $btnTextHoverColor;
+    // box-shadow: 0 0 10px $btnTextHoverColor;
     color: $btnTextHoverColor;
     cursor: pointer;
 }
@@ -488,6 +531,15 @@ ul {
     padding: 0;
 }
 
+@keyframes menuSlide {
+    from{
+        left: -100px;
+    }
+    to{
+        left: 0;
+    }
+}
+
 @media (max-width: 1760px) {
     .ticket_icon {
         display: none;
@@ -505,11 +557,11 @@ ul {
 
 @media (max-width: 1200px) {
     .grid_menu_space {
-        display: none;
+        // display: none;
     }
 
     .mainMenu__compact {
-        display: block;
+        // display: block;
     }
 
 }

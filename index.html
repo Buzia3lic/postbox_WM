@@ -15,7 +15,7 @@
 
 <body>
     <div class="grid">
-        <div class="grid_menu_space">
+        <div id="mainMenu" class="grid_menu_space">
             <div class="grid_menu">
                 <a href="#"><img class="logo" src="img/logo_wt.png" alt="logo"></a>
                 <a href="#" class="grid_menu_items grid_menu_items_active">
@@ -37,7 +37,7 @@
             <div class="ticket_header">
 
                 <div class="mainMenu__compact">
-                    Меню
+                    <span class = "mainMenu__compact__btn" onclick="showMenu()">Меню</span>
                 </div>
 
                 <div>
@@ -52,7 +52,7 @@
 
 
                 <div>
-                    <span class="ticketMenu__name">Диалоги</span>
+                    <span class="ticketMenu__name">Все диалоги</span>
                     <ul class="ticket_header_menu">
                         <li class="ticket_header_menu_item ticket_header_menu_item_active">Все<span
                                 class="ticket_header_count">54</span></li>
@@ -177,25 +177,39 @@
             </div>
 
             <div class="converstation_textfield">
-                <textarea class="new_answer" name="new_answer" placeholder="Введите сообщение для ответа..."
-                    rows="4"></textarea>
-                <div class="answer_btn_field">
-                    <div class="btn_layout">
-                        <button class="btn">Отправить</button>
-                        <!-- <button class="answer_attach"><i class="fa-solid fa-paperclip btn_icon"></i></button> -->
-                        <label class="outputFile">
-                            <input type="file" name="file" id="outputFile">
-                        </label>
-                    </div>
-                    <div class="btn_layout">
-                        <button class="btn">Перенаправить</button>
-                        <button class="btn">Добавить в личное</button>
+                <div class="converstation_textfield__answerField">
+                    <textarea class="new_answer" name="new_answer" placeholder="Введите сообщение для ответа..."
+                        rows="4"></textarea>
+                    <div class="answer_btn_field">
+                        <div class="btn_layout">
+                            <button class="btn">Отправить</button>
+                            <!-- <button class="answer_attach"><i class="fa-solid fa-paperclip btn_icon"></i></button> -->
+                            <label class="outputFile">
+                                <input type="file" name="file" id="outputFile">
+                            </label>
+                        </div>
+                        <div class="btn_layout">
+                            <button class="btn">Перенаправить</button>
+                            <button class="btn">Добавить в личное</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
     </div>
+
+    <script>
+        function showMenu() {
+            const x = document.getElementById("mainMenu");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+    </script>
 </body>
 
 </html>
