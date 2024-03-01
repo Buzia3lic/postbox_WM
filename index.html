@@ -18,179 +18,137 @@
         <div id="mainMenu" class="grid_menu_space">
             <div class="grid_menu">
                 <a href="#"><img class="logo" src="img/logo_wt.png" alt="logo"></a>
-                <a href="#" class="grid_menu_items grid_menu_items_active">
+                <a href="#" class="grid_menu_items grid_menu_items_active" onclick="mainMuneItemActive(event)">
                     <i class="fa-regular fa-comment-dots menu_icon"></i>
                     <br>
                     Тикеты</a>
-                <a href="#" class="grid_menu_items">
+                <a href="#" class="grid_menu_items" onclick="mainMuneItemActive(event)">
                     <i class="fa-solid fa-list menu_icon"></i>
                     <br>
-                    Ящики</a>
+                    Меню</a>
             </div>
-            <a href="#" class="grid_menu_items">
+            <a href="#" class="grid_menu_items" onclick="mainMuneItemActive(event)">
                 <i class="fa-solid fa-right-from-bracket menu_icon"></i>
                 <br>
                 Выход</a>
         </div>
 
-        <div class="grid_tickets">
-            <div class="ticket_header">
-
-                <div class="mainMenu__compact">
-                    <span class = "mainMenu__compact__btn" onclick="showMenu()">Меню</span>
-                </div>
-
-                <div>
-                    <form action="#" method="get">
-                        <input class="ticket_search" name="ticketNumber" type="search" placeholder="Тикет №">
-
-                        <input class="ticketSearch__submit" type="submit" value="Найти">
-
-
-                    </form>
-                </div>
-
-
-                <div>
-                    <span class="ticketMenu__name">Все диалоги</span>
-                    <ul class="ticket_header_menu">
-                        <li class="ticket_header_menu_item ticket_header_menu_item_active">Все<span
-                                class="ticket_header_count">54</span></li>
-                        <li class="ticket_header_menu_item">Личные<span class="ticket_header_count">2</span></li>
-                        <li class="ticket_header_menu_item">Перенаправленные<span class="ticket_header_count">5</span>
-                        </li>
-                        <!-- <a href="#" class="ticket_header_menu_item ticket_header_menu_item_active">Все</a>
-                        <a href="#" class="ticket_header_menu_item">Личные</a>
-                        <a href="#" class="ticket_header_menu_item">Перенаправленные</a> -->
-                    </ul>
-                </div>
-            </div>
-
-
-            <ul class="ticket_list">
-
-                <li class="ticket_list_item ticket_list_item_active">
-                    <label class="ticket__checkbox">
-                        <input class="customCheckbox" type="checkbox">
-                        <img class="ticket_icon"
-                            src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=ff0000&color=fff">
-                    </label>
-                    <div class="ticket_list_content">
-                        <div class="ticket_email">lorem@mail.ru</div>
-                        <div class="ticket_time">19.02.24 14:41:25</div>
-                        <div class="ticket_theme">Lorem ipsum dolor, sit amet consectetur adipisicing.</div>
-                    </div>
-                </li>
-
-                <li class="ticket_list_item">
-                    <label class="ticket__checkbox">
-                        <input class="customCheckbox" type="checkbox" checked>
-                        <img class="ticket_icon"
-                            src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=ff0000&color=fff">
-                    </label>
-
-                    <div class="ticket_list_content">
-                        <div class="ticket_email">lorem@mail.ru</div>
-                        <div class="ticket_time">19.02.24 14:41:25</div>
-                        <div class="ticket_theme">Lorem ipsum dolor, sit amet consectetur adipisicing.</div>
-                    </div>
-                </li>
-                <li class="ticket_list_item">
-                    <label class="ticket__checkbox">
-                        <input class="customCheckbox" type="checkbox">
-                        <img class="ticket_icon"
-                            src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=ff0000&color=fff">
-                    </label>
-
-                    <div class="ticket_list_content">
-                        <div class="ticket_email">lorem@mail.ru</div>
-                        <div class="ticket_time">19.02.24 14:41:25</div>
-                        <div class="ticket_theme">Lorem ipsum dolor, sit amet consectetur adipisicing.</div>
-                    </div>
-                </li>
-                <li class="ticket_list_item">
-                    <label class="ticket__checkbox">
-                        <input class="customCheckbox" type="checkbox">
-                        <img class="ticket_icon"
-                            src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=ff0000&color=fff">
-                    </label>
-
-                    <div class="ticket_list_content">
-                        <div class="ticket_email">lorem@mail.ru</div>
-                        <div class="ticket_time">19.02.24 14:41:25</div>
-                        <div class="ticket_theme">Lorem ipsum dolor, sit amet consectetur adipisicing.</div>
-                    </div>
-                </li>
-                <li class="ticket_list_item">
-                    <label class="ticket__checkbox">
-                        <input class="customCheckbox" type="checkbox">
-                        <img class="ticket_icon"
-                            src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=ff0000&color=fff">
-                    </label>
-
-                    <div class="ticket_list_content">
-                        <div class="ticket_email">lorem@mail.ru</div>
-                        <div class="ticket_time">19.02.24 14:41:25</div>
-                        <div class="ticket_theme">Lorem ipsum dolor, sit amet consectetur adipisicing.</div>
-                    </div>
-                </li>
-                <li class="ticket_list_item">
-                    <label class="ticket__checkbox">
-                        <input class="customCheckbox" type="checkbox">
-                        <img class="ticket_icon"
-                            src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=ff0000&color=fff">
-                    </label>
-
-                    <div class="ticket_list_content">
-                        <div class="ticket_email">lorem@mail.ru</div>
-                        <div class="ticket_time">19.02.24 14:41:25</div>
-                        <div class="ticket_theme">Lorem ipsum dolor, sit amet consectetur adipisicing.</div>
-                    </div>
-                </li>
-
-            </ul>
-
-
-
-        </div>
-
-        <div class="grid_converstation">
-            <div class="converstation_info">info</div>
-
-            <div class="converstation_field">
-
-                <div class="converstation_question">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Laudantium, dicta?
-                    <br>
-                    <span class="question_info">20.02.24 15:09:10</span>
-                </div>
-
-                <div class="converstation_answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-                    excepturi quam quisquam atque alias nostrum facilis libero vitae nam ipsam.
-                    <br>
-                    <span class="answer_info">
-                        <span>Иванов И. И.</span>
-                        <span>20.02.24 15:10:22</span>
-                    </span>
-                </div>
-
-            </div>
-
-            <div class="converstation_textfield">
-                <div class="converstation_textfield__answerField">
-                    <textarea class="new_answer" name="new_answer" placeholder="Введите сообщение для ответа..."
-                        rows="4"></textarea>
-                    <div class="answer_btn_field">
-                        <div class="btn_layout">
-                            <button class="btn">Отправить</button>
-                            <!-- <button class="answer_attach"><i class="fa-solid fa-paperclip btn_icon"></i></button> -->
-                            <label class="outputFile">
-                                <input type="file" name="file" id="outputFile">
-                            </label>
+        <div id="main" class="main">
+            <div class="grid_tickets">
+                <div class="ticket_header">
+                    <div class="mainMenu__compact">
+                        <span class="mainMenu__compact__btn" onclick="showMenu()">Главное меню</span>
+                        <div class="searchForm">
+                            <form action="#" method="get" class="">
+                                <input class="ticket_search" name="ticketNumber" type="search" placeholder="Тикет №">
+                                <!-- <input class="ticketSearch__submit" type="submit" value="Найти"> -->
+                                <button class="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
                         </div>
-                        <div class="btn_layout">
-                            <button class="btn">Перенаправить</button>
-                            <button class="btn">Добавить в личное</button>
+                    </div>
+                    <!-- <div>
+                        <form action="#" method="get">
+                            <input class="ticket_search" name="ticketNumber" type="search" placeholder="Тикет №">
+                            <input class="ticketSearch__submit" type="submit" value="Найти">
+                        </form>
+                    </div> -->
+                    <div>
+                        <div class="ticketMenu__emails">
+                            <span class="ticketMenu__name">Диалоги</span>
+                            <select name="emailSelect" id="emailSelect">
+                                <option value="ex1@email.com">ex1@email.com</option>
+                                <option value="ex2@email.com">ex2@email.com</option>
+                                <option value="ex3@email.com">ex3@email.com</option>
+                            </select>
+                        </div>
+                        <ul class="ticket_header_menu">
+                            <li class="ticket_header_menu_item ticket_header_menu_item_active"
+                                onclick="ticketMuneItemActive(event)">Все<span class="ticket_header_count">54</span>
+                            </li>
+                            <li class="ticket_header_menu_item" onclick="ticketMuneItemActive(event)">Личные<span
+                                    class="ticket_header_count">2</span></li>
+                            <li class="ticket_header_menu_item" onclick="ticketMuneItemActive(event)">
+                                Перенаправленные<span class="ticket_header_count">5</span>
+                            </li>
+                            <!-- <a href="#" class="ticket_header_menu_item ticket_header_menu_item_active">Все</a>
+                            <a href="#" class="ticket_header_menu_item">Личные</a>
+                            <a href="#" class="ticket_header_menu_item">Перенаправленные</a> -->
+                        </ul>
+                    </div>
+                </div>
+                <ul class="ticket_list">
+                    <li class="ticket_list_item ticket_list_item_active" onclick="ticketListItemActiv(event)">
+                        <label class="ticket__checkbox">
+                            <input class="customCheckbox" type="checkbox">
+                            <img class="ticket_icon"
+                                src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=ff0000&color=fff">
+                        </label>
+                        <div class="ticket_list_content">
+                            <div class="ticket_email">lorem@mail.ru</div>
+                            <div class="ticket_time">19.02.24 14:41:25</div>
+                            <div class="ticket_theme">Lorem ipsum dolor, sit amet consectetur adipisicing.</div>
+                        </div>
+                    </li>
+                    <li class="ticket_list_item" onclick="ticketListItemActiv(event)">
+                        <label class="ticket__checkbox">
+                            <input class="customCheckbox" type="checkbox">
+                            <img class="ticket_icon"
+                                src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=ff0000&color=fff">
+                        </label>
+                        <div class="ticket_list_content">
+                            <div class="ticket_email">lorem@mail.ru</div>
+                            <div class="ticket_time">19.02.24 14:41:25</div>
+                            <div class="ticket_theme">Lorem ipsum dolor, sit amet consectetur adipisicing.</div>
+                        </div>
+                    </li>
+                    <li class="ticket_list_item" onclick="ticketListItemActiv(event)">
+                        <label class="ticket__checkbox">
+                            <input class="customCheckbox" type="checkbox">
+                            <img class="ticket_icon"
+                                src="https://ui-avatars.com/api/?rounded=true&length=1&name=lorem&background=ff0000&color=fff">
+                        </label>
+                        <div class="ticket_list_content">
+                            <div class="ticket_email">lorem@mail.ru</div>
+                            <div class="ticket_time">19.02.24 14:41:25</div>
+                            <div class="ticket_theme">Lorem ipsum dolor, sit amet consectetur adipisicing.</div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="grid_converstation">
+                <div class="converstation_info">info</div>
+                <div class="converstation_field">
+                    <div class="converstation_question">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Laudantium, dicta?
+                        <br>
+                        <span class="question_info">20.02.24 15:09:10</span>
+                    </div>
+                    <div class="converstation_answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+                        excepturi quam quisquam atque alias nostrum facilis libero vitae nam ipsam.
+                        <br>
+                        <span class="answer_info">
+                            <span>Иванов И. И.</span>
+                            <span>20.02.24 15:10:22</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="converstation_textfield">
+                    <div class="converstation_textfield__answerField">
+                        <textarea class="new_answer" name="new_answer" placeholder="Введите сообщение для ответа..."
+                            rows="4"></textarea>
+                        <div class="answer_btn_field">
+                            <div class="btn_layout">
+                                <button class="btn">Отправить</button>
+                                <!-- <button class="answer_attach"><i class="fa-solid fa-paperclip btn_icon"></i></button> -->
+                                <label class="outputFile">
+                                    <input type="file" name="file" id="outputFile">
+                                </label>
+                            </div>
+                            <div class="btn_layout">
+                                <button class="btn">Перенаправить</button>
+                                <button class="btn">Добавить в личное</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -199,17 +157,7 @@
 
     </div>
 
-    <script>
-        function showMenu() {
-            const x = document.getElementById("mainMenu");
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
-            }
-        }
-
-    </script>
+    <script src="index.js"></script>
 </body>
 
 </html>

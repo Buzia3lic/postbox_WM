@@ -261,19 +261,20 @@ body {
   text-align: center;
 }
 
-.grid {
-  display: flex;
-  flex-basis: 38rem;
-}
-
 .grid_menu_space {
+  width: 80px;
   background-color: #021631;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem;
-  position: relative;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: 0.5s;
+  overflow: hidden;
 }
 
 .grid_menu {
@@ -289,7 +290,7 @@ body {
   font-size: 1.6rem;
   text-decoration: none;
   padding: 1rem;
-  transition: all 0.5s ease-in-out;
+  transition: 0.3s;
 }
 
 .grid_menu_items_active {
@@ -302,8 +303,15 @@ body {
   transform: scale(1.1);
 }
 
+.grid_menu_items:focus {
+  outline: none;
+}
+
 .mainMenu__compact {
-  background-color: #021631;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f2f6;
   padding: 1rem;
   text-align: left;
 }
@@ -313,8 +321,8 @@ body {
   font-family: "Montserrat", Arial, sans-serif;
   text-transform: uppercase;
   font-weight: bold;
-  color: #fff;
-  transition: all 0.5s ease-in-out;
+  color: black;
+  transition: 0.3s;
 }
 
 .mainMenu__compact__btn::before {
@@ -328,24 +336,44 @@ body {
   transform: scale(1.1);
 }
 
+.main {
+  transition: 0.5s;
+  display: flex;
+}
+
 .grid_tickets {
+  min-width: 35rem;
+  max-width: 25%;
+  transition: 0.5s;
+  margin-left: 80px;
   min-height: 38rem;
   height: 100vh;
   background-color: #f1f2f6;
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-grow: 1;
+}
+
+.searchForm {
+  border: 2px solid #e8e8f0;
+  background-color: white;
+  border-radius: 1rem;
+  margin: 0 1rem;
+}
+
+.searchBtn {
+  background-color: transparent;
+  border: none;
 }
 
 .ticket_search {
-  width: 50%;
   font-family: "Montserrat", Arial, sans-serif;
-  margin: 1rem;
-  margin-right: 0;
   font-size: 1em;
   border: none;
   border-radius: 9px;
   padding: 0.5rem;
+  outline: none;
 }
 
 .ticket_search::-moz-placeholder {
@@ -369,13 +397,23 @@ body {
   background-color: #fff;
 }
 
+.ticketMenu__emails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .ticketMenu__name {
-  display: inline-block;
-  background-color: #f1f2f6;
-  padding: 1rem 0;
-  width: 99%;
+  margin-right: 1rem;
   color: black;
   font-weight: bolder;
+}
+
+#emailSelect {
+  border: 2px solid #e8e8f0;
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  outline: 0;
 }
 
 /* .ticket_search:after{
@@ -397,7 +435,7 @@ ul {
 .ticket_header_count {
   margin-left: 1rem;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   padding: 0 1rem;
 }
 
@@ -423,8 +461,13 @@ ul {
 
 .ticket_header_menu_item:hover {
   color: #81c2ff;
+  font-weight: bold;
   cursor: pointer;
-  border-bottom: 1px solid #81c2ff;
+  border-bottom: 2px solid #81c2ff;
+}
+
+.ticket_header_menu_item:hover .ticket_header_count {
+  border: 2px solid;
 }
 
 .ticket_header_menu_item_active {
@@ -484,6 +527,7 @@ ul {
 
 .ticket_theme {
   padding: 0 1rem 1rem 0;
+  overflow: hidden;
 }
 
 /* .ticket_icon {
@@ -502,6 +546,10 @@ ul {
 .ticket__checkbox {
   position: relative;
   padding: 1rem;
+}
+
+.ticket__checkbox:hover {
+  cursor: pointer;
 }
 
 .customCheckbox {
@@ -709,14 +757,6 @@ ul {
   padding: 0;
 }
 
-@keyframes menuSlide {
-  from {
-    left: -100px;
-  }
-  to {
-    left: 0;
-  }
-}
 @media (max-width: 1760px) {
   .ticket_icon {
     display: none;
@@ -730,6 +770,7 @@ ul {
     display: none;
   }
   .grid_tickets {
+    max-width: none;
     width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
