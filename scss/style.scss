@@ -563,14 +563,15 @@ ul {
     }
 }
 
+.balloon-footer{
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .converstration-contextButtons {
-    display: none;
-    // height: 1px;
     overflow: hidden;
-    position: absolute;
-    right: 1rem;
-    top: -2.5rem;
-    background-color: #fff;
     border-radius: 0.5rem;
 
     &>button {
@@ -645,14 +646,14 @@ ul {
 
 .question_info {
     opacity: 0.5;
-    float: right;
-    margin-top: 1rem;
+    // float: right;
+    // margin-top: 1rem;
 }
 
 .answer_info {
     opacity: 0.5;
-    float: right;
-    margin-top: 1rem;
+    // float: right;
+    // margin-top: 1rem;
 }
 
 .answer_info>span {
