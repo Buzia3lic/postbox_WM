@@ -614,11 +614,26 @@ ul {
   font-weight: bold;
 }
 
+.info-field {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f1f2f6;
+  border: 2px solid #e8e8f0;
+}
+.info-field > button {
+  font-size: 2rem;
+  background-color: transparent;
+  border: none;
+  transition: 0.3s;
+}
+.info-field > button:hover {
+  transform: scale(1.1);
+}
+
 .converstation_info {
   padding: 1rem;
-  background-color: #f1f2f6;
   text-align: center;
-  border: 2px solid #e8e8f0;
+  overflow: hidden;
 }
 
 .info-header {
@@ -640,7 +655,30 @@ ul {
   font-weight: bold;
 }
 
-.converstation_field {
+.converstation-area {
+  flex-grow: 1;
+  display: flex;
+}
+
+#converstation-history {
+  border: 2px solid #e8e8f0;
+  width: 0px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+#converstation-history > ul {
+  padding-inline-start: 1rem;
+}
+#converstation-history > ul li {
+  padding: 0.5rem;
+}
+#converstation-history > ul li::before {
+  content: "\f15c";
+  font-family: FontAwesome;
+  margin-right: 1rem;
+}
+
+.converstation_dialog {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -648,15 +686,15 @@ ul {
   overflow: auto;
 }
 
-.converstation_field::-webkit-scrollbar {
+.converstation_dialog::-webkit-scrollbar {
   width: 1rem;
 }
 
-.converstation_field::-webkit-scrollbar-track {
+.converstation_dialog::-webkit-scrollbar-track {
   background: #f1f2f6;
 }
 
-.converstation_field::-webkit-scrollbar-thumb {
+.converstation_dialog::-webkit-scrollbar-thumb {
   background-color: #cccccc;
   border-radius: 1rem;
   border: 1px solid #f1f2f6;

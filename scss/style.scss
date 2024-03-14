@@ -94,7 +94,7 @@ body {
 //     margin-top: auto;
 // }
 
-.main{
+.main {
     margin-left: 60px;
     position: relative;
     transition: .5s;
@@ -113,7 +113,7 @@ body {
     // opacity: 0;
 }
 
-.main-content.active{
+.main-content.active {
     // opacity: 1;
     display: grid;
 }
@@ -346,17 +346,17 @@ ul {
     padding: 1rem;
     overflow: hidden;
     flex-grow: 1;
-//     width: auto;
-//     max-width: calc(100% - 60px);
-//     // max-width: 90%;
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: space-between;
-//     padding: 2rem 1rem;
-//     align-items: center;
+    //     width: auto;
+    //     max-width: calc(100% - 60px);
+    //     // max-width: 90%;
+    //     display: flex;
+    //     flex-wrap: wrap;
+    //     justify-content: space-between;
+    //     padding: 2rem 1rem;
+    //     align-items: center;
 }
 
-.ticket-footer{
+.ticket-footer {
     display: flex;
     // width: auto;
     justify-content: space-between;
@@ -379,7 +379,7 @@ ul {
     text-overflow: ellipsis;
 }
 
-.ticket_theme::before{
+.ticket_theme::before {
     content: 'Тема:';
     margin-right: 0.5rem;
     text-transform: uppercase;
@@ -425,45 +425,91 @@ ul {
     overflow: hidden;
 }
 
-.ticket_number{
+.ticket_number {
     margin-right: 1rem;
 }
 
-.ticket_number::before{
+.ticket_number::before {
     content: 'Тикет№:';
     margin-right: 0.5rem;
     text-transform: uppercase;
     font-weight: bold;
 }
 
-.converstation_info {
-    padding: 1rem;
+.info-field {
+    display: flex;
+    justify-content: space-between;
     background-color: $mainColor2;
-    text-align: center;
     border: 2px solid #e8e8f0;
+
+    &>button {
+        font-size: 2rem;
+        background-color: transparent;
+        border: none;
+        transition: 0.3s;
+    }
+
+    &>button:hover {
+        transform: scale(1.1);
+    }
 
 }
 
-.info-header{
+.converstation_info {
+    padding: 1rem;
+    // background-color: $mainColor2;
+    text-align: center;
+    // border: 2px solid #e8e8f0;
+    overflow: hidden;
+
+}
+
+.info-header {
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
 }
 
-.info-footer{
+.info-footer {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
-.info-footer::before{
+.info-footer::before {
     content: 'Отправитель:';
     margin-right: 0.5rem;
     text-transform: uppercase;
     font-weight: bold;
 }
 
-.converstation_field {
+.converstation-area {
+    flex-grow: 1;
+    display: flex;
+}
+
+#converstation-history {
+    // background-color: $mainColor2;
+    border: 2px solid #e8e8f0;
+    width: 0px;
+    overflow: hidden;
+    transition: 0.5s;
+    &>ul {
+        padding-inline-start: 1rem;
+    }
+
+    &>ul li {
+        padding: 0.5rem;
+    }
+
+    &>ul li::before {
+        content: '\f15c';
+        font-family: FontAwesome;
+        margin-right: 1rem;
+    }
+}
+
+.converstation_dialog {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -472,21 +518,21 @@ ul {
     overflow: auto;
 }
 
-.converstation_field::-webkit-scrollbar {
+.converstation_dialog::-webkit-scrollbar {
     width: 1rem;
 }
 
-.converstation_field::-webkit-scrollbar-track {
+.converstation_dialog::-webkit-scrollbar-track {
     background: $converstationScrollColor1;
 }
 
-.converstation_field::-webkit-scrollbar-thumb {
+.converstation_dialog::-webkit-scrollbar-thumb {
     background-color: $converstationScrollColor2;
     border-radius: 1rem;
     border: 1px solid $converstationScrollColor1;
 }
 
-.support-comment{
+.support-comment {
     display: flex;
     justify-content: center;
     background-color: darkorange;
@@ -496,12 +542,13 @@ ul {
     border-radius: 1rem;
     box-shadow: 0 0 1rem rgb(177, 177, 177);
     text-shadow: 0 0 3px black;
-    & > span{
+
+    &>span {
         margin-right: 1rem;
     }
 }
 
-.moved-ticket{
+.moved-ticket {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -510,12 +557,13 @@ ul {
     padding: 1rem;
     border-radius: 1rem;
     box-shadow: 0 0 1rem rgb(177, 177, 177);
-    & > * {
+
+    &>* {
         margin-right: 1rem;
     }
 }
 
-.converstration-contextButtons{
+.converstration-contextButtons {
     display: none;
     // height: 1px;
     overflow: hidden;
@@ -524,13 +572,15 @@ ul {
     top: -2.5rem;
     background-color: #fff;
     border-radius: 0.5rem;
-    & > button {
+
+    &>button {
         padding: 0.5rem;
         background-color: transparent;
         border: none;
         border-radius: 0.5rem;
     }
-    & > button:hover{
+
+    &>button:hover {
         background-color: yellow;
     }
 }
@@ -545,7 +595,8 @@ ul {
     align-self: flex-start;
     color: $TextColor;
     box-shadow: 0 0 1rem 0px rgb(177, 177, 177);
-    &:hover .converstration-contextButtons{
+
+    &:hover .converstration-contextButtons {
         display: block;
         // height: auto;
     }
@@ -574,7 +625,8 @@ ul {
     align-self: flex-end;
     color: $TextColor;
     box-shadow: 0 0 1rem 0px rgb(177, 177, 177);
-    &:hover .converstration-contextButtons{
+
+    &:hover .converstration-contextButtons {
         display: block;
         // height: auto;
     }
@@ -715,7 +767,7 @@ ul {
 @media (max-width: 1024px) {
     .main-content {
         grid-template-columns: auto;
-   }
+    }
 
     .grid_converstation {
         display: none;

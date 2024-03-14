@@ -1,13 +1,22 @@
 function showMenu() {
     const x = document.getElementById("mainMenu");
     const y = document.getElementById("main");
-    console.log(y);
+    // console.log(y);
     if (x.style.width === "0px") {
         x.style.width = "60px";
         y.style.marginLeft = "60px";
     } else {
         x.style.width = "0px";
         y.style.marginLeft = "0px";
+    }
+}
+
+function showHistory() {
+    const y = document.getElementById("converstation-history");
+    if (y.style.width === "0px") {
+        y.style.width = "200px";
+    } else {
+        y.style.width = "0px";
     }
 }
 
