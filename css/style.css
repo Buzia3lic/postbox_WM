@@ -319,16 +319,17 @@ body {
 }
 
 .main-content {
-  max-width: 100%;
+  height: 100vh;
   transition: 0.5s;
   display: none;
+  grid-template-columns: minmax(450px, 2fr) 4fr;
   position: absolute;
   left: 0;
   top: 0;
 }
 
 .main-content.active {
-  display: flex;
+  display: grid;
 }
 
 .mainMenu__compact {
@@ -353,15 +354,13 @@ body {
 }
 
 .grid_tickets {
-  min-width: 35rem;
-  max-width: 20%;
   transition: 0.5s;
-  height: 100vh;
   background-color: #f1f2f6;
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-grow: 1;
+  overflow: hidden;
 }
 
 .searchForm {
@@ -494,6 +493,7 @@ ul {
   flex-grow: 1;
   width: 99%;
   padding: 0;
+  overflow-y: scroll;
 }
 
 .ticket_list::-webkit-scrollbar {
@@ -662,6 +662,54 @@ ul {
   border: 1px solid #f1f2f6;
 }
 
+.support-comment {
+  display: flex;
+  justify-content: center;
+  background-color: darkorange;
+  color: bisque;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgb(177, 177, 177);
+  text-shadow: 0 0 3px black;
+}
+.support-comment > span {
+  margin-right: 1rem;
+}
+
+.moved-ticket {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightyellow;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgb(177, 177, 177);
+}
+.moved-ticket > * {
+  margin-right: 1rem;
+}
+
+.converstration-contextButtons {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  right: 1rem;
+  top: -2.5rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+.converstration-contextButtons > button {
+  padding: 0.5rem;
+  background-color: transparent;
+  border: none;
+  border-radius: 0.5rem;
+}
+.converstration-contextButtons > button:hover {
+  background-color: yellow;
+}
+
 .converstation_question {
   position: relative;
   max-width: 70%;
@@ -672,6 +720,9 @@ ul {
   align-self: flex-start;
   color: black;
   box-shadow: 0 0 1rem 0px rgb(177, 177, 177);
+}
+.converstation_question:hover .converstration-contextButtons {
+  display: block;
 }
 
 .converstation_question:before {
@@ -695,6 +746,9 @@ ul {
   align-self: flex-end;
   color: black;
   box-shadow: 0 0 1rem 0px rgb(177, 177, 177);
+}
+.converstation_answer:hover .converstration-contextButtons {
+  display: block;
 }
 
 .converstation_answer:after {
@@ -819,7 +873,10 @@ ul {
     position: static;
   }
 }
-@media (max-width: 1120px) {
+@media (max-width: 1024px) {
+  .main-content {
+    grid-template-columns: auto;
+  }
   .grid_converstation {
     display: none;
   }
