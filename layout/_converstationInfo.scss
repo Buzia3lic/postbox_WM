@@ -1,0 +1,57 @@
+.ticket_number {
+    margin-right: 1rem;
+}
+
+.ticket_number::before {
+    content: 'Тикет№:';
+    margin-right: 0.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.info-field {
+    display: flex;
+    justify-content: space-between;
+    background-color: $mainColor2;
+    border: 2px solid #e8e8f0;
+
+    &>button {
+        font-size: 2rem;
+        background-color: transparent;
+        border: none;
+        transition: 0.3s;
+    }
+
+    &>button:hover {
+        transform: scale(1.1);
+    }
+
+}
+
+.converstation_info {
+    padding: 1rem;
+    // background-color: $mainColor2;
+    text-align: center;
+    // border: 2px solid #e8e8f0;
+    overflow: hidden;
+
+}
+
+.info-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.info-footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.info-footer::before {
+    content: 'Отправитель:';
+    margin-right: 0.5rem;
+    text-transform: uppercase;
+    // font-weight: bold;
+}

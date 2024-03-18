@@ -13,10 +13,10 @@ function showMenu() {
 
 function showHistory() {
     const y = document.getElementById("converstation-history");
-    if (y.style.width === "0px") {
-        y.style.width = "200px";
-    } else {
+    if (y.style.width === "200px") {
         y.style.width = "0px";
+    } else {
+        y.style.width = "200px";
     }
 }
 

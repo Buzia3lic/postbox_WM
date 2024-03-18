@@ -1,0 +1,23 @@
+.main {
+    margin-left: 60px;
+    position: relative;
+    transition: .5s;
+
+}
+
+.main-content {
+    // width: 100%;
+    height: 100vh;
+    transition: .5s;
+    display: none;
+    grid-template-columns: minmax(450px, 1fr) 3fr;
+    position: absolute;
+    left: 0;
+    top: 0;
+    // opacity: 0;
+}
+
+.main-content.active {
+    // opacity: 1;
+    display: grid;
+}

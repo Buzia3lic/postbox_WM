@@ -1,0 +1,88 @@
+
+.converstation_textfield {
+    // border-top: 2px solid #c79500;
+    // display: flex;
+    // flex-direction: column;
+    background-color: $textFieldBoxColor;
+    border-top: 2px solid #e8e8f0;
+}
+
+.converstation_textfield__answerField {
+    margin: 1rem 2rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    // width: 100%;
+    background-color: white;
+}
+
+.new_answer {
+    font-family: 'Montserrat', Arial, sans-serif;
+    resize: none;
+    // margin: 1rem 1rem;
+    font-size: 1em;
+    border-radius: 4px;
+    padding: 1rem;
+
+    border: none;
+    outline: none;
+}
+
+.new_answer:focus {
+    box-shadow: 0 0 1rem $answerShadow;
+}
+
+.new_answer::placeholder {
+    font-family: 'Montserrat', Arial, sans-serif;
+    opacity: 0.5;
+}
+
+
+.btn_layout {
+    display: flex;
+    align-items: center;
+    color: $TextColor;
+}
+
+.btn {
+    // text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 1rem;
+    border: 1px solid $btnTextColor;
+    border-radius: 0.4em;
+    background-color: $btnBackgroundColor;
+    margin: 1rem;
+    color: $btnTextColor;
+}
+
+.btn_icon {
+    font-size: 1.5em;
+    /* display: inline-block; */
+    /* width: 100%; */
+    /* text-align: center; */
+}
+
+.btn:hover {
+    background-color: $btnBackgroundHoverColor;
+    // box-shadow: 0 0 10px $btnTextHoverColor;
+    color: $btnTextHoverColor;
+    cursor: pointer;
+}
+
+.btn_icon:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.answer_btn_field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.answer_attach {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}

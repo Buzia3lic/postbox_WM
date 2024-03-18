@@ -231,24 +231,6 @@ input[type=checkbox], input[type=radio] {
   padding: 0;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-html {
-  font-size: 10px;
-}
-
-body {
-  font-family: "Montserrat", Arial, sans-serif;
-  font-size: 1.2rem;
-  width: 100%;
-  margin: auto;
-  flex-grow: 1;
-  box-sizing: border-box;
-}
-
 .logo {
   width: 4rem;
   margin: 1rem auto;
@@ -332,6 +314,25 @@ body {
   display: grid;
 }
 
+#converstation-history {
+  flex-shrink: 0;
+  border: 2px solid #e8e8f0;
+  width: 200px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+#converstation-history > ul {
+  padding-inline-start: 1rem;
+}
+#converstation-history > ul li {
+  padding: 0.5rem;
+}
+#converstation-history > ul li::before {
+  content: "\f15c";
+  font-family: FontAwesome;
+  margin-right: 1rem;
+}
+
 .mainMenu__compact {
   display: flex;
   justify-content: space-between;
@@ -351,16 +352,6 @@ body {
 .mainMenu__compact__btn:hover {
   cursor: pointer;
   transform: scale(1.1);
-}
-
-.grid_tickets {
-  transition: 0.5s;
-  background-color: #f1f2f6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-grow: 1;
-  overflow: hidden;
 }
 
 .searchForm {
@@ -429,10 +420,6 @@ content: '\f002';
 font-family: FontAwesome;
 color: rgba(0, 0, 0, 0.3);
 } */
-ul {
-  list-style: none;
-}
-
 .select_emails {
   font-family: "Montserrat", Arial, sans-serif;
   padding: 0.5rem;
@@ -573,14 +560,6 @@ ul {
   font-weight: bold;
 }
 
-/* .ticket_icon {
-    height: 4rem;
-    width: 4rem;
-    background-color: #a67c00;
-    border-radius: 100%;
-    padding: 1rem 1.5rem;
-    margin: 1rem;
-} */
 .ticket_list_item:nth-child(even) {
   background-color: rgb(250, 250, 250);
 }
@@ -593,14 +572,6 @@ ul {
   background-color: #d8d7d7;
   font-weight: bold;
   color: black;
-}
-
-.grid_converstation {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  flex-grow: 1;
-  overflow: hidden;
 }
 
 .ticket_number {
@@ -652,30 +623,6 @@ ul {
   content: "Отправитель:";
   margin-right: 0.5rem;
   text-transform: uppercase;
-  font-weight: bold;
-}
-
-.converstation-area {
-  flex-grow: 1;
-  display: flex;
-}
-
-#converstation-history {
-  border: 2px solid #e8e8f0;
-  width: 0px;
-  overflow: hidden;
-  transition: 0.5s;
-}
-#converstation-history > ul {
-  padding-inline-start: 1rem;
-}
-#converstation-history > ul li {
-  padding: 0.5rem;
-}
-#converstation-history > ul li::before {
-  content: "\f15c";
-  font-family: FontAwesome;
-  margin-right: 1rem;
 }
 
 .converstation_dialog {
@@ -898,18 +845,48 @@ ul {
   padding: 0;
 }
 
-@media (max-width: 1760px) {
-  .ticket_icon {
-    display: none;
-  }
-  .ticket_list_content {
-    max-width: calc(100% - 33px);
-  }
-  .customCheckbox {
-    position: static;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
-@media (max-width: 1024px) {
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  width: 100%;
+  margin: auto;
+  flex-grow: 1;
+  box-sizing: border-box;
+}
+
+.grid_tickets {
+  transition: 0.5s;
+  background-color: #f1f2f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.grid_converstation {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.converstation-area {
+  flex-grow: 1;
+  display: flex;
+}
+
+@media (max-width: 1250px) {
   .main-content {
     grid-template-columns: auto;
   }
