@@ -231,24 +231,7 @@ input[type=checkbox], input[type=radio] {
   padding: 0;
 }
 
-.logo {
-  width: 4rem;
-  margin: 1rem auto;
-}
-
-.menu_icon {
-  font-size: 3em;
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-}
-
-.grid {
-  max-width: 100vw;
-  width: auto;
-}
-
-.grid_menu_space {
+.side-menu {
   width: 60px;
   background-color: #021631;
   display: flex;
@@ -263,14 +246,22 @@ input[type=checkbox], input[type=radio] {
   transition: 0.5s;
   overflow: hidden;
 }
-
-.grid_menu {
+.side-menu__logo {
+  width: 4rem;
+  margin: 1rem auto;
+}
+.side-menu__icon {
+  font-size: 3em;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.side-menu__layout {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-.grid_menu_items {
+.side-menu__item {
   margin-bottom: 1rem;
   font-family: "Montserrat", Arial, sans-serif;
   color: #858e9d;
@@ -279,28 +270,23 @@ input[type=checkbox], input[type=radio] {
   padding: 1rem;
   transition: 0.3s;
 }
-
-.grid_menu_items.active {
+.side-menu__item.active {
   color: #fff;
 }
-
-.grid_menu_items:hover {
-  /* box-shadow: 0 0 6px white; */
+.side-menu__item:hover {
   color: #bcc2ca;
   transform: scale(1.1);
 }
-
-.grid_menu_items:focus {
+.side-menu__item:focus {
   outline: none;
 }
 
-.main {
+.content {
   margin-left: 60px;
   position: relative;
   transition: 0.5s;
 }
-
-.main-content {
+.content__item {
   height: 100vh;
   transition: 0.5s;
   display: none;
@@ -309,8 +295,12 @@ input[type=checkbox], input[type=radio] {
   left: 0;
   top: 0;
 }
-
-.main-content.active {
+@media (max-width: 1250px) {
+  .content__item {
+    grid-template-columns: auto;
+  }
+}
+.content__item.active {
   display: grid;
 }
 
@@ -333,7 +323,12 @@ input[type=checkbox], input[type=radio] {
   margin-right: 1rem;
 }
 
-.mainMenu__compact {
+.ticket-section__menu {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+.ticket-section__menu-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -341,141 +336,91 @@ input[type=checkbox], input[type=radio] {
   padding: 1rem;
   text-align: left;
 }
-
-.mainMenu__compact__btn {
+.ticket-section__menu-btn {
   font-size: 2rem;
   margin: 0.5rem;
   color: black;
   transition: 0.3s;
 }
-
-.mainMenu__compact__btn:hover {
+.ticket-section__menu-btn:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
-
-.searchForm {
+.ticket-section__menu-search {
   border: 2px solid #e8e8f0;
   background-color: white;
   border-radius: 1rem;
   margin: 0 1rem;
 }
-
-.searchBtn {
+.ticket-section__menu-search-btn {
   background-color: transparent;
   border: none;
 }
-
-.ticket_search {
-  font-family: "Montserrat", Arial, sans-serif;
+.ticket-section__menu-search-form {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-size: 1em;
   border: none;
   border-radius: 9px;
   padding: 0.5rem;
   outline: none;
 }
-
-.ticket_search::-moz-placeholder {
-  font-family: "Montserrat", Arial, sans-serif;
+.ticket-section__menu-search-form::-moz-placeholder {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   opacity: 0.3;
 }
-
-.ticket_search::placeholder {
-  font-family: "Montserrat", Arial, sans-serif;
+.ticket-section__menu-search-form::placeholder {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   opacity: 0.3;
 }
-
-.ticketSearch__submit {
-  font-family: "Montserrat", Arial, sans-serif;
-  margin: 1rem;
-  margin-left: 0;
-  font-size: 1em;
-  border: none;
-  border-radius: 9px;
-  padding: 0.5rem;
-  background-color: #fff;
-}
-
-.ticketMenu__emails {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.ticketMenu__name {
-  margin-right: 1rem;
-  color: black;
-  font-weight: bolder;
-}
-
-#emailSelect {
+.ticket-section__menu-emails {
   border: 2px solid #e8e8f0;
   padding: 0.4rem;
   border-radius: 0.5rem;
   outline: 0;
 }
-
-/* .ticket_search:after{
-content: '\f002';
-font-family: FontAwesome;
-color: rgba(0, 0, 0, 0.3);
-} */
-.select_emails {
-  font-family: "Montserrat", Arial, sans-serif;
-  padding: 0.5rem;
-  margin-left: 1rem;
-  font-size: 1em;
+.ticket-section__menu-select {
+  color: black;
+  font-weight: bolder;
+  text-transform: uppercase;
 }
 
-.ticket_header_count {
-  margin-left: 1rem;
-  border: 1px solid;
-  border-radius: 1rem;
-  padding: 0 1rem;
-}
-
-.ticket_header {
-  display: inline-block;
-  text-align: center;
-  width: 100%;
-  /* height: 20rem; */
-}
-
-.ticket_header_menu {
+.ticket-section__submenu {
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 1rem;
   transition: all 0.5s ease-in-out;
 }
-
-.ticket_header_menu_item {
+.ticket-section__submenu-count {
+  margin-left: 1rem;
+  border: 1px solid;
+  border-radius: 1rem;
+  padding: 0 1rem;
+}
+.ticket-section__submenu-item {
   padding: 1rem;
   color: black;
 }
-
-.ticket_header_menu_item:hover {
+.ticket-section__submenu-item:hover {
   color: #81c2ff;
   font-weight: bold;
   cursor: pointer;
   border-bottom: 2px solid #81c2ff;
 }
-
-.ticket_header_menu_item:hover .ticket_header_count {
+.ticket-section__submenu-item:hover .ticket-section__submenu-count {
   border: 2px solid;
 }
-
-.ticket_header_menu_item.active {
+.ticket-section__submenu-item.active {
   color: #1d90fb;
   border-bottom: 2px solid #1d90fb;
   font-weight: bold;
 }
-
-.ticket_header_menu_item.active .ticket_header_count {
+.ticket-section__submenu-item.active .ticket-section__submenu-count {
   border: 2px solid;
 }
 
-.ticket_list {
+.ticket-list {
   background-color: white;
   flex-grow: 1;
   width: 99%;
@@ -863,8 +808,12 @@ body {
   box-sizing: border-box;
 }
 
-.grid_tickets {
-  transition: 0.5s;
+.wrapper {
+  max-width: 100vw;
+  width: auto;
+}
+
+.ticket-section {
   background-color: #f1f2f6;
   display: flex;
   flex-direction: column;
@@ -873,7 +822,7 @@ body {
   overflow: hidden;
 }
 
-.grid_converstation {
+.converstation-section {
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -887,9 +836,6 @@ body {
 }
 
 @media (max-width: 1250px) {
-  .main-content {
-    grid-template-columns: auto;
-  }
   .grid_converstation {
     display: none;
   }

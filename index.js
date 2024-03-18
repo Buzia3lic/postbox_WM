@@ -1,6 +1,6 @@
 function showMenu() {
-    const x = document.getElementById("mainMenu");
-    const y = document.getElementById("main");
+    const x = document.getElementById("side-menu");
+    const y = document.getElementById("content");
     // console.log(y);
     if (x.style.width === "0px") {
         x.style.width = "60px";
@@ -22,10 +22,10 @@ function showHistory() {
 
 
 
-const mainMenuItemArr = document.querySelectorAll(".grid_menu_items");
-const ticketMenuItemArr = document.querySelectorAll(".ticket_header_menu_item");
+const mainMenuItemArr = document.querySelectorAll(".side-menu__item");
+const ticketMenuItemArr = document.querySelectorAll(".ticket-section__submenu-item");
 const ticketListArr = document.querySelectorAll('.ticket_list_item');
-const mainContentArr = document.querySelectorAll('.main-content')
+const mainContentArr = document.querySelectorAll('.content__item')
 
 
 // Переключение табов

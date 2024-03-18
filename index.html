@@ -14,65 +14,65 @@
 </head>
 
 <body>
-    <div class="grid">
-        <div id="mainMenu" class="grid_menu_space">
-            <div class="grid_menu">
-                <a href="#"><img class="logo" src="img/logo_wt.png" alt="logo" onclick="showMenu()"></a>
-                <a href="#" class="grid_menu_items active">
-                    <i class="fa-regular fa-comment-dots menu_icon"></i>
+    <div class="wrapper">
+        <div id="side-menu" class="side-menu">
+            <div class="side-menu__layout">
+                <a href="#"><img class="side-menu__logo" src="img/logo_wt.png" alt="logo" onclick="showMenu()"></a>
+                <a href="#" class="side-menu__item active">
+                    <i class="fa-regular fa-comment-dots side-menu__icon"></i>
                     <br>
                     Тикеты</a>
-                <a href="#" class="grid_menu_items">
-                    <i class="fa-solid fa-list menu_icon"></i>
+                <a href="#" class="side-menu__item">
+                    <i class="fa-solid fa-list side-menu__icon"></i>
                     <br>
                     Меню</a>
             </div>
-            <a href="#" class="grid_menu_items">
-                <i class="fa-solid fa-right-from-bracket menu_icon"></i>
+            <a href="#" class="side-menu__item">
+                <i class="fa-solid fa-right-from-bracket side-menu__icon"></i>
                 <br>
                 Выход</a>
         </div>
 
 
-        <div id="main" class="main">
-            <div class="main-content active">
-                <div class="grid_tickets">
-                    <div class="ticket_header">
-                        <div class="mainMenu__compact">
-                            <span class="mainMenu__compact__btn" onclick="showMenu()"><i
-                                    class="fa-solid fa-bars"></i></span>
-                            <div class="searchForm">
-                                <form action="#" method="get" class="">
-                                    <input class="ticket_search" name="ticketNumber" type="search"
+        <div id="content" class="content">
+            <div class="content__item active">
+                <div class="ticket-section">
+                    <div class="ticket-section__menu">
+                        <div class="ticket-section__menu-top">
+                            <span class="ticket-section__menu-btn" onclick="showMenu()">
+                                <i class="fa-solid fa-bars"></i>
+                            </span>
+                            <div class="ticket-section__menu-search">
+                                <form action="#" method="get">
+                                    <input class="ticket-section__menu-search-form" name="ticketNumber" type="search"
                                         placeholder="Тикет №">
-                                    <!-- <input class="ticketSearch__submit" type="submit" value="Найти"> -->
-                                    <button class="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                    <button class="ticket-section__menu-search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
                                 </form>
                             </div>
                         </div>
-                        <div>
-                            <div class="ticketMenu__emails">
-                                <span class="ticketMenu__name">Диалоги</span>
-                                <select name="emailSelect" id="emailSelect">
+                            
+                            <label class="ticket-section__menu-select">Диалоги
+                                 <select name="ticket-section__menu-emails" class="ticket-section__menu-emails">
                                     <option value="ex1@email.com">ex1@email.com</option>
                                     <option value="ex2@email.com">ex2@email.com</option>
                                     <option value="ex3@email.com">ex3@email.com</option>
                                 </select>
-                            </div>
-                            <ul class="ticket_header_menu">
-                                <li class="ticket_header_menu_item active">Все<span
-                                        class="ticket_header_count">54</span>
+                            </label>
+
+                            <ul class="ticket-section__submenu">
+                                <li class="ticket-section__submenu-item active">Все<span
+                                        class="ticket-section__submenu-count">54</span>
                                 </li>
-                                <li class="ticket_header_menu_item">Личные<span class="ticket_header_count">2</span>
+                                <li class="ticket-section__submenu-item">Личные<span class="ticket-section__submenu-count">2</span>
                                 </li>
-                                <li class="ticket_header_menu_item">
-                                    Перенаправленные<span class="ticket_header_count">5</span>
+                                <li class="ticket-section__submenu-item">
+                                    Перенаправленные<span class="ticket-section__submenu-count">5</span>
                                 </li>
 
                             </ul>
-                        </div>
+                       
                     </div>
-                    <ul class="ticket_list">
+                    <ul class="ticket-list">
                         <li class="ticket_list_item active">
                             <label class="ticket__checkbox">
                                 <input class="customCheckbox" type="checkbox">
@@ -133,7 +133,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="grid_converstation">
+                <div class="converstation-section">
 
                     <div class="info-field">
                         <div class="converstation_info">
@@ -146,7 +146,7 @@
                                 <div class="ticket_email">lorem@mail.ru</div>
                                 <div class="WMID">12345678910</div>
                             </div>
-                            
+
                         </div>
                         <button onclick="showHistory()">
                             <i class="fa-solid fa-clock"></i>
@@ -195,12 +195,12 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="support-comment">
                                 <span>Иванов И. И.:</span>
                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </div>
-                            
+
                             <div class="converstation_question">
                                 <p>
                                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -236,7 +236,7 @@
                             </div>
 
                         </div>
-                        
+
                         <div id="converstation-history">
                             <ul>ex1@mail.com
                                 <li><a href="#">08.09.2024&nbsp14:14:14</a></li>
@@ -274,7 +274,7 @@
                 </div>
             </div>
 
-            <div class="main-content">
+            <div class="content__item">
                 <div>
                     <span class="mainMenu__compact__btn" onclick="showMenu()"><i class="fa-solid fa-bars"></i></span>
                     <br>
