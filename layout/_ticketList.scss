@@ -1,114 +1,100 @@
-
-.ticket-list {
-    // height: calc(100vh - 20rem);
-    // height: 100vh;
+.ticket-section__list {
     background-color: white;
     flex-grow: 1;
     width: 99%;
     padding: 0;
     overflow-y: scroll;
-}
 
-.ticket_list::-webkit-scrollbar {
-    width: 1rem;
-}
 
-.ticket_list::-webkit-scrollbar-track {
-    background: $ticketListScrollColor1;
-}
+    &::-webkit-scrollbar {
+        width: 1rem;
+    }
 
-.ticket_list::-webkit-scrollbar-thumb {
-    background-color: $ticketListScrollColor2;
-    border-radius: 1rem;
-    border: 1px solid $ticketListScrollColor1;
-}
+    &::-webkit-scrollbar-track {
+        background: $ticketListScrollColor1;
+    }
 
-.ticket_list_item {
-    cursor: pointer;
-    overflow: hidden;
-    display: flex;
-    background-color: $ticketListItemColor1;
-    align-items: center;
+    &::-webkit-scrollbar-thumb {
+        background-color: $ticketListScrollColor2;
+        border-radius: 1rem;
+        border: 1px solid $ticketListScrollColor1;
+    }
 
-}
+    &-item {
+        cursor: pointer;
+        overflow: hidden;
+        display: flex;
+        background-color: $ticketListItemColor1;
+        align-items: center;
 
-.ticket_icon {
-    margin: 0rem;
-    width: 4rem;
-}
 
-.ticket__checkbox {
-    flex-shrink: 0;
-    position: relative;
-    padding: 1rem;
-}
 
-.ticket__checkbox:hover {
-    cursor: pointer;
-}
+        &:nth-child(even) {
+            background-color: $ticketListItemColor2;
+        }
 
-.customCheckbox {
-    position: absolute;
-    right: 1rem;
-    bottom: 1rem;
-    // z-index: -1;
-    // opacity: 0;
-}
+        &:hover {
+            background-color: $ticketListItemHoverColor;
+        }
 
-.ticket_list_content {
-    padding: 1rem;
-    overflow: hidden;
-    flex-grow: 1;
-    //     width: auto;
-    //     max-width: calc(100% - 60px);
-    //     // max-width: 90%;
-    //     display: flex;
-    //     flex-wrap: wrap;
-    //     justify-content: space-between;
-    //     padding: 2rem 1rem;
-    //     align-items: center;
-}
+        &.active {
+            background-color: $ticketListItemActiveColor;
+            font-weight: bold;
+            color: $TextColor;
+        }
 
-.ticket-footer {
-    display: flex;
-    // width: auto;
-    justify-content: space-between;
-    // padding: 2rem 1rem;
-    align-items: center;
-}
+        &-icon {
+            margin: 0rem;
+            width: 4rem;
+        }
 
-.ticket_email {
-    padding: 0.5rem;
-}
+        &-checkbox-label {
+            flex-shrink: 0;
+            position: relative;
+            padding: 1rem;
+        }
 
-.ticket_time {
-    padding: 0.5rem;
-}
+        &-checkbox-label:hover {
+            cursor: pointer;
+        }
 
-.ticket_theme {
-    padding: 0.5rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
+        &-checkbox {
+            position: absolute;
+            right: 1rem;
+            bottom: 1rem;
+        }
 
-.ticket_theme::before {
-    content: 'Тема:';
-    margin-right: 0.5rem;
-    text-transform: uppercase;
-    font-weight: bold;
-}
+        &-content {
+            width: 100%;
+            overflow: hidden;
+        }
 
-.ticket_list_item:nth-child(even) {
-    background-color: $ticketListItemColor2;
-}
+        &-content-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-.ticket_list_item:hover {
-    background-color: $ticketListItemHoverColor;
-}
+        &-email {
+            padding: 0.5rem;
+        }
 
-.ticket_list_item.active {
-    background-color: $ticketListItemActiveColor;
-    font-weight: bold;
-    color: $TextColor;
+        &-time {
+            padding: 0.5rem;
+        }
+
+        &-theme {
+            padding: 0.5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &-theme::before {
+            content: 'Тема:';
+            margin-right: 0.5rem;
+            text-transform: uppercase;
+        }
+    }
+
 }

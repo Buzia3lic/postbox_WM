@@ -24,7 +24,7 @@ function showHistory() {
 
 const mainMenuItemArr = document.querySelectorAll(".side-menu__item");
 const ticketMenuItemArr = document.querySelectorAll(".ticket-section__submenu-item");
-const ticketListArr = document.querySelectorAll('.ticket_list_item');
+const ticketListArr = document.querySelectorAll('.ticket-section__list-item');
 const mainContentArr = document.querySelectorAll('.content__item')
 
 

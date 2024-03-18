@@ -41,20 +41,13 @@ body {
     height: 100vh;
     flex-grow: 1;
     overflow: hidden;
-}
 
-.converstation-area {
-    flex-grow: 1;
-    display: flex;
-}
-
-@media ($middle) {
-    .grid_converstation {
-        display: none;
+    &__dialog-area {
+        flex-grow: 1;
+        display: flex;
     }
 
-    .grid_tickets {
-        max-width: none;
-        // width: 100%;
+    @media ($middle) {
+        display: none;
     }
 }

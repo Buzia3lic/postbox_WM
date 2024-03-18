@@ -312,15 +312,25 @@ input[type=checkbox], input[type=radio] {
   transition: 0.3s;
 }
 #converstation-history > ul {
+  list-style: none;
   padding-inline-start: 1rem;
+}
+#converstation-history > ul i {
+  margin-right: 0.5rem;
+}
+#converstation-history > ul a {
+  text-decoration: none;
+  color: black;
+}
+#converstation-history > ul a:hover {
+  text-shadow: 0 0 1px blue;
+  color: blue;
 }
 #converstation-history > ul li {
   padding: 0.5rem;
 }
-#converstation-history > ul li::before {
-  content: "\f15c";
-  font-family: FontAwesome;
-  margin-right: 1rem;
+#converstation-history > ul li:hover {
+  color: blue;
 }
 
 .ticket-section__menu {
@@ -420,151 +430,139 @@ input[type=checkbox], input[type=radio] {
   border: 2px solid;
 }
 
-.ticket-list {
+.ticket-section__list {
   background-color: white;
   flex-grow: 1;
   width: 99%;
   padding: 0;
   overflow-y: scroll;
 }
-
-.ticket_list::-webkit-scrollbar {
+.ticket-section__list::-webkit-scrollbar {
   width: 1rem;
 }
-
-.ticket_list::-webkit-scrollbar-track {
+.ticket-section__list::-webkit-scrollbar-track {
   background: #ffffff;
 }
-
-.ticket_list::-webkit-scrollbar-thumb {
+.ticket-section__list::-webkit-scrollbar-thumb {
   background-color: #cccccc;
   border-radius: 1rem;
   border: 1px solid #ffffff;
 }
-
-.ticket_list_item {
+.ticket-section__list-item {
   cursor: pointer;
   overflow: hidden;
   display: flex;
   background-color: #fff;
   align-items: center;
 }
-
-.ticket_icon {
+.ticket-section__list-item:nth-child(even) {
+  background-color: rgb(250, 250, 250);
+}
+.ticket-section__list-item:hover {
+  background-color: rgba(216, 215, 215, 0.5);
+}
+.ticket-section__list-item.active {
+  background-color: #d8d7d7;
+  font-weight: bold;
+  color: black;
+}
+.ticket-section__list-item-icon {
   margin: 0rem;
   width: 4rem;
 }
-
-.ticket__checkbox {
+.ticket-section__list-item-checkbox-label {
   flex-shrink: 0;
   position: relative;
   padding: 1rem;
 }
-
-.ticket__checkbox:hover {
+.ticket-section__list-item-checkbox-label:hover {
   cursor: pointer;
 }
-
-.customCheckbox {
+.ticket-section__list-item-checkbox {
   position: absolute;
   right: 1rem;
   bottom: 1rem;
 }
-
-.ticket_list_content {
-  padding: 1rem;
+.ticket-section__list-item-content {
+  width: 100%;
   overflow: hidden;
-  flex-grow: 1;
 }
-
-.ticket-footer {
+.ticket-section__list-item-content-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.ticket_email {
+.ticket-section__list-item-email {
   padding: 0.5rem;
 }
-
-.ticket_time {
+.ticket-section__list-item-time {
   padding: 0.5rem;
 }
-
-.ticket_theme {
+.ticket-section__list-item-theme {
   padding: 0.5rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-.ticket_theme::before {
+.ticket-section__list-item-theme::before {
   content: "Тема:";
   margin-right: 0.5rem;
   text-transform: uppercase;
-  font-weight: bold;
 }
 
-.ticket_list_item:nth-child(even) {
-  background-color: rgb(250, 250, 250);
-}
-
-.ticket_list_item:hover {
-  background-color: rgba(216, 215, 215, 0.5);
-}
-
-.ticket_list_item.active {
-  background-color: #d8d7d7;
-  font-weight: bold;
-  color: black;
-}
-
-.ticket_number {
-  margin-right: 1rem;
-}
-
-.ticket_number::before {
-  content: "Тикет№:";
-  margin-right: 0.5rem;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.info-field {
+.converstation-section__info {
   display: flex;
   justify-content: space-between;
   background-color: #f1f2f6;
   border: 2px solid #e8e8f0;
 }
-.info-field > button {
+.converstation-section__info > button {
   font-size: 2rem;
   background-color: transparent;
   border: none;
   transition: 0.3s;
 }
-.info-field > button:hover {
+.converstation-section__info > button:hover {
   transform: scale(1.1);
 }
-
-.converstation_info {
+.converstation-section__info-section {
   padding: 1rem;
   text-align: center;
   overflow: hidden;
 }
-
-.info-header {
+.converstation-section__info-section-top {
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
 }
-
-.info-footer {
+.converstation-section__info-section-bottom {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-
-.info-footer::before {
+.converstation-section__info-section-email {
+  padding: 0.5rem;
+}
+.converstation-section__info-section-theme {
+  padding: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.converstation-section__info-section-theme::before {
+  content: "Тема:";
+  margin-right: 0.5rem;
+  text-transform: uppercase;
+}
+.converstation-section__info-section-number {
+  margin-right: 1rem;
+}
+.converstation-section__info-section-number::before {
+  content: "Тикет№:";
+  margin-right: 0.5rem;
+  text-transform: uppercase;
+}
+.converstation-section__info-section-bottom::before {
   content: "Отправитель:";
   margin-right: 0.5rem;
   text-transform: uppercase;
@@ -829,17 +827,12 @@ body {
   flex-grow: 1;
   overflow: hidden;
 }
-
-.converstation-area {
+.converstation-section__dialog-area {
   flex-grow: 1;
   display: flex;
 }
-
 @media (max-width: 1250px) {
-  .grid_converstation {
+  .converstation-section {
     display: none;
-  }
-  .grid_tickets {
-    max-width: none;
   }
 }/*# sourceMappingURL=style.css.map */

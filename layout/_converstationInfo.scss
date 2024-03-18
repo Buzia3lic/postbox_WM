@@ -1,15 +1,4 @@
-.ticket_number {
-    margin-right: 1rem;
-}
-
-.ticket_number::before {
-    content: 'Тикет№:';
-    margin-right: 0.5rem;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.info-field {
+.converstation-section__info {
     display: flex;
     justify-content: space-between;
     background-color: $mainColor2;
@@ -25,33 +14,59 @@
     &>button:hover {
         transform: scale(1.1);
     }
-
+    
+    &-section {
+        padding: 1rem;
+        text-align: center;
+        overflow: hidden;
+        
+        &-top {
+            display: flex;
+            justify-content: flex-start;
+            align-items: baseline;
+        }
+        
+        &-bottom {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    
+        &-email {
+            padding: 0.5rem;
+        }
+    
+        &-theme {
+            padding: 0.5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    
+        &-theme::before {
+            content: 'Тема:';
+            margin-right: 0.5rem;
+            text-transform: uppercase;
+        }
+    
+        &-number {
+            margin-right: 1rem;
+        }
+    
+        &-number::before {
+            content: 'Тикет№:';
+            margin-right: 0.5rem;
+            text-transform: uppercase;
+            // font-weight: bold;
+        }
+    
+        &-bottom::before {
+            content: 'Отправитель:';
+            margin-right: 0.5rem;
+            text-transform: uppercase;
+            // font-weight: bold;
+        }
+    }
 }
 
-.converstation_info {
-    padding: 1rem;
-    // background-color: $mainColor2;
-    text-align: center;
-    // border: 2px solid #e8e8f0;
-    overflow: hidden;
 
-}
-
-.info-header {
-    display: flex;
-    justify-content: flex-start;
-    align-items: baseline;
-}
-
-.info-footer {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.info-footer::before {
-    content: 'Отправитель:';
-    margin-right: 0.5rem;
-    text-transform: uppercase;
-    // font-weight: bold;
-}
